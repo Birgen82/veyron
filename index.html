@@ -432,7 +432,7 @@ footer .flex {
         <img src="images/groeiscan.png" alt="Groeiscan icoon" class="h-12 w-auto mx-auto mb-3 object-contain">
         <h4 class="text-xl font-semibold mb-3 text-brand-orange">Groeiscan</h4>
         <p class="text-gray-700 mb-4">
-          Analyse en richting voor uw digitale strategie.  
+          Analyse en richting voor uw digitale strategie.
           Ontdek waar u rendement verliest en hoe u dit structureel kunt verbeteren.
         </p>
         <button onclick="openModal()" class="btn btn-outline">Ontdek de Groeiscan</button>
@@ -443,7 +443,7 @@ footer .flex {
         <img src="images/module-coreflow.png" alt="Modules icoon" class="h-12 w-auto mx-auto mb-3 object-contain">
         <h4 class="text-xl font-semibold mb-3 text-brand-blue">Groeimodules</h4>
         <p class="text-gray-700 mb-4">
-          Van MVP tot automatisatie: onze modules bouwen concreet verder  
+          Van MVP tot automatisatie: onze modules bouwen concreet verder
           op wat in de Oriëntatie of Groeiscan bepaald werd.
         </p>
         <a href="#modules" class="btn btn-outline">Bekijk de modules</a>
@@ -454,7 +454,7 @@ footer .flex {
         <img src="images/talent-projectteams.png" alt="Talent icoon" class="h-12 w-auto mx-auto mb-3 object-contain">
         <h4 class="text-xl font-semibold mb-3 text-gray-900">Veyron Talent</h4>
         <p class="text-gray-700 mb-4">
-          De juiste experts op het juiste moment.  
+          De juiste experts op het juiste moment.
           Projectteams, tijdelijke versterking of directe werving — altijd onder het Veyron-kader.
         </p>
         <a href="#talent" class="btn btn-outline">Ontdek Veyron Talent</a>
@@ -757,65 +757,82 @@ footer .flex {
 
   <!-- Modal: Groeimodules -->
   <div id="modulesModal" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
-    <div class="bg-white max-w-5xl w-full mx-4 p-8 rounded-2xl relative shadow-lg overflow-y-auto max-h-[85vh]">
+    <div class="bg-white max-w-6xl w-full mx-4 p-8 rounded-2xl relative shadow-lg overflow-y-auto max-h-[90vh]">
       <button id="closeModules" class="absolute top-4 right-4 text-gray-500 hover:text-black text-2xl leading-none">&times;</button>
       <h3 class="text-2xl font-extrabold mb-6 text-brand-blue text-center">Groeimodules</h3>
-      <p class="text-center text-gray-700 mb-8 max-w-3xl mx-auto">
+      <p class="text-center text-gray-700 mb-10 max-w-3xl mx-auto">
         Zodra de richting duidelijk is, bouwen we verder met onze groeimodules.
         Elke module levert een concreet resultaat — strategisch, technisch of commercieel.
         U kiest wat u nodig heeft, wij bouwen het met precisie en rendement.
       </p>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-700">
+      <!-- Strategie -->
+      <h4 class="text-xl font-bold mt-6 mb-3 text-brand-blue text-center">Strategie</h4>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10 text-gray-700">
         <div class="card text-center">
           <img src="images/module-origin.png" alt="Origin icoon" class="h-8 w-8 mx-auto mb-2 object-contain">
-          <h5 class="text-lg font-semibold text-brand-blue">Origin</h5>
-          <p>Van idee naar gevalideerd plan — getest concept, klaar om te bouwen.</p>
-        </div>
-        <div class="card text-center">
-          <img src="images/module-forge.png" alt="Forge icoon" class="h-8 w-8 mx-auto mb-2 object-contain">
-          <h5 class="text-lg font-semibold text-brand-orange">Forge</h5>
-          <p>Van MVP naar schaalbaar product — digitale platformen en academies.</p>
-        </div>
-        <div class="card text-center">
-          <img src="images/module-coreflow.png" alt="Coreflow icoon" class="h-8 w-8 mx-auto mb-2 object-contain">
-          <h5 class="text-lg font-semibold text-brand-blue">Coreflow</h5>
-          <p>Digitalisatie & automatisatie van kernprocessen.</p>
-        </div>
-        <div class="card text-center">
-          <img src="images/module-streamline.png" alt="Streamline icoon" class="h-8 w-8 mx-auto mb-2 object-contain">
-          <h5 class="text-lg font-semibold text-brand-orange">Streamline</h5>
-          <p>Data-integratie & CRM/ERP-koppelingen voor efficiëntie.</p>
-        </div>
-        <div class="card text-center">
-          <img src="images/module-pulse.png" alt="Pulse icoon" class="h-8 w-8 mx-auto mb-2 object-contain">
-          <h5 class="text-lg font-semibold text-brand-blue">Pulse</h5>
-          <p>Workflow-optimalisatie en backoffice-structuur.</p>
-        </div>
-        <div class="card text-center">
-          <img src="images/module-foresight.png" alt="Foresight icoon" class="h-8 w-8 mx-auto mb-2 object-contain">
-          <h5 class="text-lg font-semibold text-brand-orange">Foresight</h5>
-          <p>AI- en datatoepassingen die rendement meten en voorspellen.</p>
-        </div>
-        <div class="card text-center">
-          <img src="images/module-orbit.png" alt="Orbit icoon" class="h-8 w-8 mx-auto mb-2 object-contain">
-          <h5 class="text-lg font-semibold text-brand-blue">Orbit</h5>
-          <p>Community- en ecosystem-design voor duurzame groei.</p>
+          <h5 class="text-lg font-semibold">Origin – Van idee naar gevalideerd plan</h5>
+          <p>Van ruw idee naar getest concept dat klaar is om te bouwen.</p>
         </div>
         <div class="card text-center">
           <img src="images/module-continuum.png" alt="Continuum icoon" class="h-8 w-8 mx-auto mb-2 object-contain">
-          <h5 class="text-lg font-semibold text-brand-orange">Continuum</h5>
-          <p>Strategisch partnerschap voor voortdurende optimalisatie.</p>
+          <h5 class="text-lg font-semibold">Continuum – Strategisch partnerschap</h5>
+          <p>Voortdurende optimalisatie en begeleiding zodat uw bedrijf blijft evolueren.</p>
+        </div>
+      </div>
+
+      <!-- Technologie -->
+      <h4 class="text-xl font-bold mt-6 mb-3 text-brand-orange text-center">Technologie</h4>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10 text-gray-700">
+        <div class="card text-center">
+          <img src="images/module-forge.png" alt="Forge icoon" class="h-8 w-8 mx-auto mb-2 object-contain">
+          <h5 class="text-lg font-semibold">Forge – Van MVP naar schaalbaar product</h5>
+          <p>Digitale platformen en academies die meegroeien met de markt.</p>
+        </div>
+        <div class="card text-center">
+          <img src="images/module-coreflow.png" alt="Coreflow icoon" class="h-8 w-8 mx-auto mb-2 object-contain">
+          <h5 class="text-lg font-semibold">Coreflow – Digitalisatie & automatisatie</h5>
+          <p>Automatiseer processen voor meer efficiëntie.</p>
+        </div>
+        <div class="card text-center">
+          <img src="images/module-streamline.png" alt="Streamline icoon" class="h-8 w-8 mx-auto mb-2 object-contain">
+          <h5 class="text-lg font-semibold">Streamline – Data-integratie & CRM/ERP-koppelingen</h5>
+          <p>Koppel systemen en laat data naadloos stromen.</p>
+        </div>
+        <div class="card text-center">
+          <img src="images/module-pulse.png" alt="Pulse icoon" class="h-8 w-8 mx-auto mb-2 object-contain">
+          <h5 class="text-lg font-semibold">Pulse – Workflow & backoffice-optimalisatie</h5>
+          <p>Maak interne processen overzichtelijker — van onboarding tot documentbeheer.</p>
+        </div>
+        <div class="card text-center">
+          <img src="images/module-foresight.png" alt="Foresight icoon" class="h-8 w-8 mx-auto mb-2 object-contain">
+          <h5 class="text-lg font-semibold">Foresight – AI & data benutten</h5>
+          <p>Inzichten en voorspellende modellen die direct rendement geven.</p>
         </div>
         <div class="card text-center">
           <img src="images/module-chain.png" alt="Chain icoon" class="h-8 w-8 mx-auto mb-2 object-contain">
-          <h5 class="text-lg font-semibold text-brand-blue">Chain</h5>
-          <p>Blockchain & digitale eigendom voor transparantie en vertrouwen.</p>
+          <h5 class="text-lg font-semibold">Chain – Blockchain & digitale eigendom</h5>
+          <p>Transparantie en eigendomsbewijzen via blockchain.</p>
         </div>
+      </div>
+
+      <!-- Activatie -->
+      <h4 class="text-xl font-bold mt-6 mb-3 text-brand-blue text-center">Activatie</h4>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6 text-gray-700">
         <div class="card text-center">
           <img src="images/module-ignite.png" alt="Ignite icoon" class="h-8 w-8 mx-auto mb-2 object-contain">
-          <h5 class="text-lg font-semibold text-brand-orange">Ignite</h5>
-          <p>Campagnes en activaties die meetbare groei brengen.</p>
+          <h5 class="text-lg font-semibold">Ignite – Tractie creëren</h5>
+          <p>Campagnes en acties die echte groei opleveren.</p>
+        </div>
+        <div class="card text-center">
+          <img src="images/module-orbit.png" alt="Orbit icoon" class="h-8 w-8 mx-auto mb-2 object-contain">
+          <h5 class="text-lg font-semibold">Orbit – Community & ecosystem design</h5>
+          <p>Bouw digitale ecosystemen — communities, academies, loyalty-platformen.</p>
+        </div>
+        <div class="card text-center">
+          <img src="images/module-continuum.png" alt="Continuum icoon" class="h-8 w-8 mx-auto mb-2 object-contain">
+          <h5 class="text-lg font-semibold">Continuum – Groei zonder einde</h5>
+          <p>Strategisch partnerschap op lange termijn — blijven meten, verbeteren en schalen.</p>
         </div>
       </div>
     </div>
