@@ -354,8 +354,7 @@ footer .flex {
 <body class="font-sans antialiased">
   <div id="top"></div>
 
-  <!-- Header -->
-<!-- HEADER MET VERBETERD RESPONSIVE MENU -->
+<!-- Header -->
 <header class="sticky top-0 z-50 bg-white/95 border-b border-gray-200 backdrop-blur-sm shadow-sm">
   <div class="max-w-7xl mx-auto px-4">
     <div class="flex items-center justify-between h-[70px]">
@@ -374,6 +373,7 @@ footer .flex {
         <a href="#why" class="nav-link">Waarom&nbsp;Veyron</a>
         <a href="#who" class="nav-link">Over&nbsp;ons</a>
         <a href="#contact" class="nav-link">Contact</a>
+
         <button onclick="openModal()" class="ml-5 flex-shrink-0 px-5 py-2.5 rounded-full font-semibold text-[14px] text-white bg-brand-orange hover:bg-[#e66100] transition whitespace-nowrap">
           Boek&nbsp;uw&nbsp;Oriëntatiescan
         </button>
@@ -388,20 +388,22 @@ footer .flex {
     </div>
   </div>
 
-  <!-- Mobiel menu (alle links identiek aan desktop) -->
-  <div id="mobileMenu" class="hidden fixed inset-0 bg-black/95 text-white z-40 flex-col items-center justify-center text-center space-y-6 text-lg font-medium">
-    <a href="#how" class="nav-link text-white hover:text-brand-orange" onclick="closeMobileMenu()">Aanpak</a>
-    <a href="#" class="nav-link text-white hover:text-brand-orange" onclick="openModal(); closeMobileMenu()">Groeiscan</a>
-    <a href="#offer" class="nav-link text-white hover:text-brand-orange" onclick="closeMobileMenu()">Modules</a>
-    <a href="#" class="nav-link text-white hover:text-brand-orange" onclick="openTalentModal(); closeMobileMenu()">Talent</a>
-    <a href="#examples" class="nav-link text-white hover:text-brand-orange" onclick="closeMobileMenu()">Cases</a>
-    <a href="#why" class="nav-link text-white hover:text-brand-orange" onclick="closeMobileMenu()">Waarom&nbsp;Veyron</a>
-    <a href="#who" class="nav-link text-white hover:text-brand-orange" onclick="closeMobileMenu()">Over&nbsp;ons</a>
-    <a href="#contact" class="nav-link text-white hover:text-brand-orange" onclick="closeMobileMenu()">Contact</a>
-    <button onclick="openModal(); closeMobileMenu()" class="mt-6 px-6 py-3 rounded-full font-semibold text-white bg-brand-orange hover:bg-[#e66100] transition text-base">
+  <!-- Mobiel menu -->
+  <div id="mobileMenu" class="hidden fixed inset-0 bg-black text-white z-50 flex flex-col items-center justify-center text-center space-y-7 text-[18px] font-medium">
+    <a href="#how" class="text-white hover:text-brand-orange" onclick="closeMobileMenu()">Aanpak</a>
+    <a href="#" class="text-white hover:text-brand-orange" onclick="openModal(); closeMobileMenu()">Groeiscan</a>
+    <a href="#offer" class="text-white hover:text-brand-orange" onclick="closeMobileMenu()">Modules</a>
+    <a href="#" class="text-white hover:text-brand-orange" onclick="openTalentModal(); closeMobileMenu()">Talent</a>
+    <a href="#examples" class="text-white hover:text-brand-orange" onclick="closeMobileMenu()">Cases</a>
+    <a href="#why" class="text-white hover:text-brand-orange" onclick="closeMobileMenu()">Waarom&nbsp;Veyron</a>
+    <a href="#who" class="text-white hover:text-brand-orange" onclick="closeMobileMenu()">Over&nbsp;ons</a>
+    <a href="#contact" class="text-white hover:text-brand-orange" onclick="closeMobileMenu()">Contact</a>
+
+    <button onclick="openModal(); closeMobileMenu()" class="mt-8 px-6 py-3 rounded-full font-semibold text-white bg-brand-orange hover:bg-[#e66100] transition text-base">
       Boek&nbsp;uw&nbsp;Oriëntatiescan
     </button>
-    <button onclick="closeMobileMenu()" class="absolute top-5 right-6 text-gray-300 hover:text-white text-3xl leading-none">&times;</button>
+
+    <button onclick="closeMobileMenu()" class="absolute top-6 right-6 text-gray-400 hover:text-white text-3xl leading-none">&times;</button>
   </div>
 </header>
 
@@ -417,10 +419,11 @@ footer .flex {
   .nav-link:hover::after,.nav-link.active::after{ width:100%; }
   .nav-link.active{ font-weight:600; color:#FF6B00; letter-spacing:-.01em; }
 
+  /* Mobiel menu fade-in */
   #mobileMenu.show{ display:flex; animation:fadeIn .3s ease; }
-  @keyframes fadeIn{ from{opacity:0;transform:translateY(-10px);} to{opacity:1;transform:translateY(0);} }
+  @keyframes fadeIn{ from{opacity:0; transform:translateY(-10px);} to{opacity:1; transform:translateY(0);} }
 
-  /* Hamburger zichtbaar enkel op mobiel */
+  /* Hamburger alleen op mobiel */
   #menuToggle{ display:none; }
   @media(max-width:768px){
     #menuToggle{ display:flex; }
@@ -444,19 +447,14 @@ footer .flex {
       mobileMenu.classList.remove('hidden');
       mobileMenu.classList.add('show');
       document.body.classList.add('overflow-hidden');
-    }else{ closeMobileMenu(); }
-  });
-
-  // Sluiten bij klik buiten menu of Escape
-  window.addEventListener('click',e=>{ if(e.target===mobileMenu) closeMobileMenu(); });
-  window.addEventListener('keydown',e=>{ if(e.key==='Escape') closeMobileMenu(); });
-
-  // 🔹 Sluit automatisch bij resize > 768px
-  window.addEventListener('resize',()=>{
-    if(window.innerWidth>768){
+    }else{
       closeMobileMenu();
     }
   });
+
+  window.addEventListener('click',e=>{ if(e.target===mobileMenu) closeMobileMenu(); });
+  window.addEventListener('keydown',e=>{ if(e.key==='Escape') closeMobileMenu(); });
+  window.addEventListener('resize',()=>{ if(window.innerWidth>768){ closeMobileMenu(); }});
 </script>
 
 <!-- === EINDE OPDRACHT — UITVOEREN ZONDER INTERPRETATIE === -->
