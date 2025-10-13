@@ -273,12 +273,12 @@ footer .flex {
 
       <nav class="hidden md:flex items-center gap-7 text-[15px] font-medium">
   <a href="#how" class="nav-link">Aanpak</a>
-  <a href="#who" class="nav-link">Over ons</a>
-  <a href="#audiences" class="nav-link">Klanten</a>
-  <a href="#offer" class="nav-link">Aanbod</a>
-  <a href="#talent" class="nav-link">Talent</a>
+  <a href="#" class="nav-link" onclick="openModal()">Groeiscan</a>
+  <a href="#offer" class="nav-link">Modules</a>
+  <a href="#" class="nav-link" onclick="openTalentModal()">Talent</a>
   <a href="#examples" class="nav-link">Cases</a>
-  <a href="#why" class="nav-link">Waarom</a>
+  <a href="#why" class="nav-link">Waarom Veyron</a>
+  <a href="#who" class="nav-link">Over ons</a>
   <a href="#contact" class="nav-link">Contact</a>
 
   <button onclick="openModal()" class="ml-4 px-5 py-2 rounded-full font-semibold text-white bg-brand-orange hover:bg-[#e66100] transition text-[15px]">
@@ -347,26 +347,6 @@ footer .flex {
       </div>
     </div>
   </section>
-
-    <div class="accent-line" aria-hidden="true"></div>
-
-    <!-- Wie wij zijn -->
-    <section id="who" class="section-anchor" aria-labelledby="who-title">
-      <div class="max-w-7xl mx-auto px-6 w-full text-center">
-        <h2 id="who-title" class="text-3xl font-extrabold mb-6">Wie wij zijn</h2>
-        <div class="content-text">
-          <p>Digitale verandering is vandaag onvermijdelijk. Toch lopen veel bedrijven vast: te veel losse tools, te veel rapporten, te weinig resultaat.</p>
-          <p class="mt-3">
-            Veyron maakt het eenvoudig. Vanuit Roeselare ondersteunen wij ondernemers en teams in heel Vlaanderen.
-            Wij vertalen uw plannen naar digitale oplossingen die écht werken: van procesdigitalisatie tot het bouwen van volledig nieuwe platformen — academies, communities of schaalbare apps. Altijd helder, schaalbaar en rendabel.
-          </p>
-          <p class="mt-3">
-            Wat ons onderscheidt: wij combineren strategie, technologie en activatie met directe toegang tot een
-            talentpool van experts. Zo krijgt elk project precies de juiste versterking — zonder ballast, altijd resultaatgericht.
-          </p>
-        </div>
-      </div>
-    </section>
 
     <div class="accent-line" aria-hidden="true"></div>
 
@@ -664,6 +644,26 @@ footer .flex {
         <p class="text-center max-w-3xl mx-auto mt-10 text-lg text-gray-700 italic">
           Waar anderen enkel processen digitaliseren, combineren wij dat met het bouwen van nieuwe digitale producten en platformen die bedrijven écht vooruit stuwen.
         </p>
+      </div>
+    </section>
+
+    <div class="accent-line" aria-hidden="true"></div>
+
+    <!-- Wie wij zijn -->
+    <section id="who" class="section-anchor" aria-labelledby="who-title">
+      <div class="max-w-7xl mx-auto px-6 w-full text-center">
+        <h2 id="who-title" class="text-3xl font-extrabold mb-6">Wie wij zijn</h2>
+        <div class="content-text">
+          <p>Digitale verandering is vandaag onvermijdelijk. Toch lopen veel bedrijven vast: te veel losse tools, te veel rapporten, te weinig resultaat.</p>
+          <p class="mt-3">
+            Veyron maakt het eenvoudig. Vanuit Roeselare ondersteunen wij ondernemers en teams in heel Vlaanderen.
+            Wij vertalen uw plannen naar digitale oplossingen die écht werken: van procesdigitalisatie tot het bouwen van volledig nieuwe platformen — academies, communities of schaalbare apps. Altijd helder, schaalbaar en rendabel.
+          </p>
+          <p class="mt-3">
+            Wat ons onderscheidt: wij combineren strategie, technologie en activatie met directe toegang tot een
+            talentpool van experts. Zo krijgt elk project precies de juiste versterking — zonder ballast, altijd resultaatgericht.
+          </p>
+        </div>
       </div>
     </section>
 
@@ -975,7 +975,7 @@ footer .flex {
     // ------------------------------
     // VEYRON MENU FIX — Correcte scroll + juiste actieve link
     // ------------------------------
-    const sections = ['how', 'who', 'audiences', 'offer', 'talent', 'examples', 'why', 'contact'];
+    const sections = ['how', 'offer', 'examples', 'why', 'who', 'contact'];
     const links = document.querySelectorAll('.nav-link');
 
     // Smooth scroll met sticky header offset
