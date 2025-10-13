@@ -90,11 +90,58 @@
     .fade-in { opacity:0; transform: translateY(20px); transition: opacity 1s ease, transform 1s ease; }
     .fade-in.show { opacity:1; transform: translateY(0); }
 
-    .nav-link { position: relative; transition: color 0.3s ease; color: #111827; font-weight: 500; }
-    .nav-link::after { content: ""; position: absolute; bottom: -3px; left: 0; width: 0; height: 2px; background: currentColor; transition: width 0.3s ease; }
-    .nav-link:hover::after, .nav-link.active::after { width: 100%; }
-    .nav-link:hover { color: #007BFF; }
-    .nav-link.active { font-weight: 700; color: #FF6B00; }
+    /* HEADER VERFIJNING */
+    header {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    /* NAV LINK STIJL */
+    .nav-link {
+      position: relative;
+      transition: color 0.25s ease;
+      color: #111827;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: rgba(255, 107, 0, 0.6);
+      transition: width 0.25s ease;
+    }
+
+    .nav-link:hover {
+      color: #FF6B00;
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    .nav-link.active {
+      font-weight: 600;
+      color: #FF6B00;
+      letter-spacing: -0.01em;
+    }
+
+    /* CTA KNOP STIJL */
+    .btn-primary,
+    header nav button {
+      font-weight: 600;
+      font-size: 14px;
+      padding: 0.65rem 1.25rem;
+      border-radius: 9999px;
+      transition: background-color 0.25s ease, transform 0.1s ease;
+    }
+
+    header nav button:hover {
+      background-color: #e66100;
+      transform: translateY(-1px);
+    }
 
     .swiper-slide { transition: transform 0.3s ease; }
     .swiper-slide:hover { transform: translateY(-2px); }
@@ -263,29 +310,29 @@ footer .flex {
   <div id="top"></div>
 
   <!-- Header -->
-<header class="sticky top-0 z-50 bg-white/85 border-b border-gray-200 backdrop-blur-sm">
+<header class="sticky top-0 z-50 bg-white/90 border-b border-gray-200 backdrop-blur-sm shadow-sm">
   <div class="max-w-7xl mx-auto px-6">
-    <div class="flex items-center justify-between h-16">
+    <div class="flex items-center justify-between h-[72px]">
       <!-- Logo -->
       <a href="#top" class="flex items-center gap-2">
         <img src="images/veyronlogo.png" alt="Veyron Logo" class="h-10 w-auto">
       </a>
 
-      <nav class="hidden md:flex items-center gap-7 text-[15px] font-medium">
-  <a href="#how" class="nav-link">Aanpak</a>
-  <a href="#" class="nav-link" onclick="openModal()">Groeiscan</a>
-  <a href="#offer" class="nav-link">Modules</a>
-  <a href="#" class="nav-link" onclick="openTalentModal()">Talent</a>
-  <a href="#examples" class="nav-link">Cases</a>
-  <a href="#why" class="nav-link">Waarom Veyron</a>
-  <a href="#who" class="nav-link">Over ons</a>
-  <a href="#contact" class="nav-link">Contact</a>
+      <!-- Navigatie -->
+      <nav class="hidden md:flex items-center gap-8 text-[14px] font-normal">
+        <a href="#how" class="nav-link">Aanpak</a>
+        <a href="#" class="nav-link" onclick="openModal()">Groeiscan</a>
+        <a href="#offer" class="nav-link">Modules</a>
+        <a href="#" class="nav-link" onclick="openTalentModal()">Talent</a>
+        <a href="#examples" class="nav-link">Cases</a>
+        <a href="#why" class="nav-link">Waarom Veyron</a>
+        <a href="#who" class="nav-link">Over ons</a>
+        <a href="#contact" class="nav-link">Contact</a>
 
-  <button onclick="openModal()" class="ml-4 px-5 py-2 rounded-full font-semibold text-white bg-brand-orange hover:bg-[#e66100] transition text-[15px]">
-    Boek uw Oriëntatiescan
-  </button>
-</nav>
-
+        <button onclick="openModal()" class="ml-4 px-5 py-2.5 rounded-full font-semibold text-[14px] text-white bg-brand-orange hover:bg-[#e66100] transition">
+          Boek uw Oriëntatiescan
+        </button>
+      </nav>
     </div>
   </div>
 </header>
