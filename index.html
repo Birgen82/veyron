@@ -222,7 +222,7 @@ footer .flex {
   <a href="#contact" class="nav-link">Contact</a>
 
   <button onclick="openModal()" class="ml-4 px-5 py-2 rounded-full font-semibold text-white bg-brand-orange hover:bg-[#e66100] transition text-[15px]">
-    Boek uw Quickscan
+    Boek uw Oriëntatiescan
   </button>
 </nav>
 
@@ -387,7 +387,7 @@ footer .flex {
       </div>
 
       <div class="text-center">
-        <img src="images/quickscan.png" alt="Oriëntatiescan icoon" class="h-28 w-auto mx-auto mb-6 object-contain">
+        <img src="images/oriëntatiescan.png" alt="Oriëntatiescan icoon" class="h-28 w-auto mx-auto mb-6 object-contain">
         <p class="text-gray-600 mb-4 max-w-sm mx-auto">
           De Oriëntatiescan is gratis en verloopt volledig online.  
           Ze helpt u inschatten waar uw digitale groei vandaag de meeste winst kan opleveren.
@@ -696,17 +696,17 @@ footer .flex {
 
       <p class="text-lg mb-6">
         Klaar om te ontdekken waar uw digitale groei het meeste rendeert?  
-        Start vandaag nog met de gratis Quickscan en krijg inzicht in uw digitale winstpunten.
+        Start vandaag nog met de gratis Oriëntatiescan en krijg inzicht in uw digitale winstpunten.
       </p>
 
       <div class="mt-2">
         <button onclick="openModal()" class="btn btn-primary text-lg">
-          Boek uw gratis Quickscan
+          Boek uw gratis Oriëntatiescan
         </button>
       </div>
 
       <p class="text-sm text-gray-500 mt-6">
-        Heeft u een andere vraag of wilt u iets afstemmen buiten de Quickscan?  
+        Heeft u een andere vraag of wilt u iets afstemmen buiten de Oriëntatiescan?  
         Mail ons gerust op <a href="mailto:info@veyron.digital" class="text-brand-blue underline">info@veyron.digital</a>.
       </p>
     </div>
@@ -745,7 +745,7 @@ footer .flex {
         <li><a href="tel:+32493436140" class="hover:text-brand-orange">+32 493 43 61 40</a></li>
       </ul>
       <div class="mt-4">
-        <button onclick="openModal()" class="btn btn-primary text-xs py-2 px-4">Boek uw Quickscan</button>
+        <button onclick="openModal()" class="btn btn-primary text-xs py-2 px-4">Boek uw Oriëntatiescan</button>
       </div>
     </div>
 
@@ -823,6 +823,13 @@ footer .flex {
       },
       loop: true
     });
+
+    // Hover-pauze alleen voor toestellen met muis
+    if (window.matchMedia('(hover: hover)').matches) {
+      const swiperEl = document.querySelector('.mySwiper');
+      swiperEl.addEventListener('mouseenter', () => swiper.autoplay.stop());
+      swiperEl.addEventListener('mouseleave', () => swiper.autoplay.start());
+    }
   </script>
 
   <!-- Modal Scripts -->
@@ -849,6 +856,20 @@ footer .flex {
     window.addEventListener('click', e => {
       const modal = document.getElementById('groeiscanModal');
       if (e.target === modal) closeModal();
+    });
+
+    // Smooth scroll fix voor navigatie met juiste offset
+    document.querySelectorAll('a.nav-link[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 80, // sticky header offset
+            behavior: 'smooth'
+          });
+        }
+      });
     });
   </script>
 
