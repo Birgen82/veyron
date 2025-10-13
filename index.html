@@ -788,21 +788,24 @@ footer .flex {
     });
 
     // Active link detection
-    // Active link detection – groeiscan toegevoegd
-    const sections = ['how', 'who', 'audiences', 'groeiscan', 'offer', 'examples', 'why', 'contact'];
+    // Active link detection met correcte offset
+    const sections = ['how', 'who', 'audiences', 'offer', 'talent', 'examples', 'why', 'contact'];
     const links = document.querySelectorAll('.nav-link');
 
     function setActiveLink() {
       let current = sections[0];
-      const scrollPos = window.scrollY + window.innerHeight / 2;
+      const scrollPos = window.scrollY + 100; // iets boven midden voor accuratere detectie
       sections.forEach(id => {
         const el = document.getElementById(id);
-        if (el && el.offsetTop <= scrollPos) current = id;
+        if (el && scrollPos >= el.offsetTop - 100 && scrollPos < el.offsetTop + el.offsetHeight - 100) {
+          current = id;
+        }
       });
-      links.forEach(l => {
-        l.classList.remove('active');
-        if (l.getAttribute('href') === '#' + current)
-          l.classList.add('active');
+      links.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
       });
     }
 
