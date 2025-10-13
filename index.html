@@ -423,9 +423,58 @@ footer .flex {
   .nav-link:hover::after,.nav-link.active::after{ width:100%; }
   .nav-link.active{ font-weight:600; color:#FF6B00; letter-spacing:-.01em; }
 
-  /* Mobiel menu animatie */
-  #mobileMenu.show{ display:flex; animation:fadeIn .35s ease; }
-  @keyframes fadeIn{ from{opacity:0; transform:translateY(-20px);} to{opacity:1; transform:translateY(0);} }
+  /* Volledig zwart, bedekt hele viewport */
+  #mobileMenu {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+    z-index: 9999 !important;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow-y: auto;
+    padding: 2rem;
+  }
+
+  /* Toon menu bij open-state */
+  #mobileMenu.show {
+    display: flex !important;
+    animation: fadeIn 0.35s ease forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Menu-items duidelijk gescheiden */
+  #mobileMenu a {
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin: 0.75rem 0;
+    transition: color .25s ease;
+  }
+
+  #mobileMenu a:hover {
+    color: #FF6B00;
+  }
+
+  /* Sluitknop zichtbaar */
+  #mobileMenu button.absolute {
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 2rem;
+  }
+
+  /* Zorg dat body niet scrolt bij open menu */
+  body.overflow-hidden {
+    overflow: hidden !important;
+  }
 
   /* Hamburger alleen zichtbaar op mobiel */
   #menuToggle{ display:none; }
