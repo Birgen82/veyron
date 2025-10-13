@@ -128,6 +128,51 @@
       letter-spacing: -0.01em;
     }
 
+  header { box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+
+  .nav-link {
+    position: relative;
+    color: #111827;
+    white-space: nowrap;
+    transition: color 0.25s ease;
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgba(255,107,0,0.6);
+    transition: width 0.25s ease;
+  }
+
+  .nav-link:hover { color: #FF6B00; }
+  .nav-link:hover::after,
+  .nav-link.active::after { width: 100%; }
+
+  .nav-link.active {
+    font-weight: 600;
+    color: #FF6B00;
+    letter-spacing: -0.01em;
+  }
+
+  /* Geen horizontale scrollbar tonen */
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+  /* Responsieve afstanden en schalen */
+  @media (max-width: 1280px) {
+    nav { gap: 5px; font-size: 13.5px; }
+    header .px-4 { padding-left: 1rem; padding-right: 1rem; }
+  }
+
+  @media (max-width: 1150px) {
+    nav { gap: 4px; font-size: 13px; }
+    header .h-\[70px\] { height: 68px; }
+  }
+
     /* CTA KNOP STIJL */
     .btn-primary,
     header nav button {
@@ -311,26 +356,26 @@ footer .flex {
 
   <!-- Header -->
 <header class="sticky top-0 z-50 bg-white/90 border-b border-gray-200 backdrop-blur-sm shadow-sm">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="flex items-center justify-between h-[72px]">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex items-center justify-between h-[70px] overflow-x-auto no-scrollbar">
       <!-- Logo -->
-      <a href="#top" class="flex items-center gap-2">
-        <img src="images/veyronlogo.png" alt="Veyron Logo" class="h-10 w-auto">
+      <a href="#top" class="flex items-center gap-2 flex-shrink-0">
+        <img src="images/veyronlogo.png" alt="Veyron Logo" class="h-9 w-auto">
       </a>
 
       <!-- Navigatie -->
-      <nav class="hidden md:flex items-center gap-8 text-[14px] font-normal">
+      <nav class="hidden md:flex items-center flex-nowrap gap-6 text-[14px] font-normal whitespace-nowrap">
         <a href="#how" class="nav-link">Aanpak</a>
         <a href="#" class="nav-link" onclick="openModal()">Groeiscan</a>
         <a href="#offer" class="nav-link">Modules</a>
         <a href="#" class="nav-link" onclick="openTalentModal()">Talent</a>
         <a href="#examples" class="nav-link">Cases</a>
-        <a href="#why" class="nav-link">Waarom Veyron</a>
-        <a href="#who" class="nav-link">Over ons</a>
+        <a href="#why" class="nav-link">Waarom&nbsp;Veyron</a>
+        <a href="#who" class="nav-link">Over&nbsp;ons</a>
         <a href="#contact" class="nav-link">Contact</a>
 
-        <button onclick="openModal()" class="ml-4 px-5 py-2.5 rounded-full font-semibold text-[14px] text-white bg-brand-orange hover:bg-[#e66100] transition">
-          Boek uw Oriëntatiescan
+        <button onclick="openModal()" class="ml-4 flex-shrink-0 px-5 py-2.5 rounded-full font-semibold text-[14px] text-white bg-brand-orange hover:bg-[#e66100] transition whitespace-nowrap">
+          Boek&nbsp;uw&nbsp;Oriëntatiescan
         </button>
       </nav>
     </div>
