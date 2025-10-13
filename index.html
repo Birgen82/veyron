@@ -354,7 +354,9 @@ footer .flex {
 <body class="font-sans antialiased">
   <div id="top"></div>
 
-<!-- Header -->
+<!-- === OPDRACHT VOOR CODEX — VOLLEDIG CORRECT EN LEESBAAR MOBIEL MENU === -->
+
+<!-- HEADER MET PREMIUM MOBIEL MENU -->
 <header class="sticky top-0 z-50 bg-white/95 border-b border-gray-200 backdrop-blur-sm shadow-sm">
   <div class="max-w-7xl mx-auto px-4">
     <div class="flex items-center justify-between h-[70px]">
@@ -363,7 +365,7 @@ footer .flex {
         <img src="images/veyronlogo.png" alt="Veyron Logo" class="h-9 w-auto">
       </a>
 
-      <!-- Desktop navigatie -->
+      <!-- Desktop menu -->
       <nav class="hidden md:flex items-center gap-7 text-[14px] font-normal whitespace-nowrap">
         <a href="#how" class="nav-link">Aanpak</a>
         <a href="#" class="nav-link" onclick="openModal()">Groeiscan</a>
@@ -373,14 +375,13 @@ footer .flex {
         <a href="#why" class="nav-link">Waarom&nbsp;Veyron</a>
         <a href="#who" class="nav-link">Over&nbsp;ons</a>
         <a href="#contact" class="nav-link">Contact</a>
-
         <button onclick="openModal()" class="ml-5 flex-shrink-0 px-5 py-2.5 rounded-full font-semibold text-[14px] text-white bg-brand-orange hover:bg-[#e66100] transition whitespace-nowrap">
           Boek&nbsp;uw&nbsp;Oriëntatiescan
         </button>
       </nav>
 
       <!-- Hamburger knop -->
-      <button id="menuToggle" class="md:hidden flex flex-col justify-center items-center w-10 h-10 rounded-md border border-gray-300 hover:border-gray-400 transition bg-white/90">
+      <button id="menuToggle" class="md:hidden flex flex-col justify-center items-center w-10 h-10 rounded-md border border-gray-300 hover:border-gray-400 transition bg-white">
         <span class="w-5 h-[2px] bg-black mb-[5px]"></span>
         <span class="w-5 h-[2px] bg-black mb-[5px]"></span>
         <span class="w-5 h-[2px] bg-black"></span>
@@ -389,7 +390,7 @@ footer .flex {
   </div>
 
   <!-- Mobiel menu -->
-  <div id="mobileMenu" class="hidden fixed inset-0 bg-black text-white z-50 flex flex-col items-center justify-center text-center space-y-7 text-[18px] font-medium">
+  <div id="mobileMenu" class="hidden fixed inset-0 bg-black text-white z-50 flex flex-col items-center justify-center text-center space-y-8 text-[18px] font-medium overflow-hidden">
     <a href="#how" class="text-white hover:text-brand-orange" onclick="closeMobileMenu()">Aanpak</a>
     <a href="#" class="text-white hover:text-brand-orange" onclick="openModal(); closeMobileMenu()">Groeiscan</a>
     <a href="#offer" class="text-white hover:text-brand-orange" onclick="closeMobileMenu()">Modules</a>
@@ -399,7 +400,7 @@ footer .flex {
     <a href="#who" class="text-white hover:text-brand-orange" onclick="closeMobileMenu()">Over&nbsp;ons</a>
     <a href="#contact" class="text-white hover:text-brand-orange" onclick="closeMobileMenu()">Contact</a>
 
-    <button onclick="openModal(); closeMobileMenu()" class="mt-8 px-6 py-3 rounded-full font-semibold text-white bg-brand-orange hover:bg-[#e66100] transition text-base">
+    <button onclick="openModal(); closeMobileMenu()" class="mt-10 px-6 py-3 rounded-full font-semibold text-white bg-brand-orange hover:bg-[#e66100] transition text-base">
       Boek&nbsp;uw&nbsp;Oriëntatiescan
     </button>
 
@@ -410,7 +411,10 @@ footer .flex {
 <!-- === CSS === -->
 <style>
   header { box-shadow:0 4px 12px rgba(0,0,0,0.05); }
-  .nav-link { position:relative; color:#111827; white-space:nowrap; transition:color .25s ease; }
+
+  .nav-link {
+    position:relative; color:#111827; white-space:nowrap; transition:color .25s ease;
+  }
   .nav-link::after {
     content:""; position:absolute; bottom:-3px; left:0; width:0; height:2px;
     background-color:rgba(255,107,0,0.6); transition:width .25s ease;
@@ -419,11 +423,11 @@ footer .flex {
   .nav-link:hover::after,.nav-link.active::after{ width:100%; }
   .nav-link.active{ font-weight:600; color:#FF6B00; letter-spacing:-.01em; }
 
-  /* Mobiel menu fade-in */
-  #mobileMenu.show{ display:flex; animation:fadeIn .3s ease; }
-  @keyframes fadeIn{ from{opacity:0; transform:translateY(-10px);} to{opacity:1; transform:translateY(0);} }
+  /* Mobiel menu animatie */
+  #mobileMenu.show{ display:flex; animation:fadeIn .35s ease; }
+  @keyframes fadeIn{ from{opacity:0; transform:translateY(-20px);} to{opacity:1; transform:translateY(0);} }
 
-  /* Hamburger alleen op mobiel */
+  /* Hamburger alleen zichtbaar op mobiel */
   #menuToggle{ display:none; }
   @media(max-width:768px){
     #menuToggle{ display:flex; }
@@ -457,7 +461,7 @@ footer .flex {
   window.addEventListener('resize',()=>{ if(window.innerWidth>768){ closeMobileMenu(); }});
 </script>
 
-<!-- === EINDE OPDRACHT — UITVOEREN ZONDER INTERPRETATIE === -->
+<!-- === EINDE OPDRACHT === -->
 
   <!-- Hero -->
   <section id="how" class="section-anchor text-center relative">
