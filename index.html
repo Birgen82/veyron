@@ -807,19 +807,27 @@ footer .flex {
       });
     });
 
-    // Actieve link detectie – altijd één actief
+    // Actieve link detectie — nauwkeurig tot onderaan
     function setActiveLink() {
-      const scrollPos = window.scrollY + 150; // marge voor detectie
+      const scrollPos = window.scrollY + 160; // marge bovenaan
+      const viewportBottom = window.scrollY + window.innerHeight;
       let currentSection = sections[0]; // standaard 'Aanpak'
 
       for (let i = 0; i < sections.length; i++) {
         const section = document.getElementById(sections[i]);
         if (section) {
-          const sectionTop = section.offsetTop - 160; // iets boven viewport
+          const sectionTop = section.offsetTop - 180;
           const sectionBottom = sectionTop + section.offsetHeight;
-          if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
+
+          // Normale secties
+          if (scrollPos >= sectionTop && scrollPos < sectionBottom - 120) {
             currentSection = sections[i];
             break;
+          }
+
+          // Extra check: onderaan pagina (laatste sectie)
+          if (viewportBottom >= document.body.scrollHeight - 50) {
+            currentSection = 'contact';
           }
         }
       }
