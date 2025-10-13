@@ -461,48 +461,6 @@ footer .flex {
       </div>
     </div>
 
-    <!-- VEYRON TALENT -->
-    <div id="talent"></div>
-    <div class="h-[3px] w-3/5 mx-auto my-10 rounded-full bg-gradient-to-r from-black/20 via-brand-orange/30 to-brand-blue/20"></div>
-    <h3 class="text-2xl font-extrabold text-center mb-3 text-gray-900">Veyron Talent — Experts die digitale groei bouwen</h3>
-    <p class="text-center max-w-3xl mx-auto mb-10 text-gray-700">
-      Veyron Talent vormt de brug tussen strategie en uitvoering.  
-      We verbinden bedrijven met top-experts binnen één kwaliteitskader: flexibel, resultaatgericht en betrouwbaar.  
-      Of het nu gaat om het samenstellen van een volledig team, tijdelijke versterking of directe aanwerving —  
-      elk traject gebeurt onder de regie van Veyron.
-    </p>
-
-    <div class="grid md:grid-cols-3 gap-8">
-      <!-- Projectteams -->
-      <div class="card text-center flex flex-col items-center border-t-4 border-brand-blue">
-        <img src="images/talent-projectteams.png" alt="Projectteams icoon" class="h-12 w-12 mb-3 object-contain">
-        <h5 class="text-lg font-semibold">Projectteams</h5>
-        <p class="mt-2 text-gray-700">Veyron assembleert multidisciplinaire teams (developers, designers, AI-specialisten, marketeers, projectmanagers) voor interne of klantprojecten.</p>
-      </div>
-
-      <!-- Outsourcing -->
-      <div class="card text-center flex flex-col items-center border-t-4 border-brand-orange">
-        <img src="images/talent-outsourcing.png" alt="Outsourcing icoon" class="h-12 w-12 mb-3 object-contain">
-        <h5 class="text-lg font-semibold">Outsourcing</h5>
-        <p class="mt-2 text-gray-700">Tijdelijke versterking binnen het Veyron-kader.  
-        Eén of meerdere experts inzetbaar op locatie of remote — zonder lange contracten of vaste overhead.</p>
-      </div>
-
-      <!-- Directe Werving -->
-      <div class="card text-center flex flex-col items-center border-t-4 border-black">
-        <img src="images/talent-directe-verbinding.png" alt="Directe verbinding icoon" class="h-12 w-12 mb-3 object-contain">
-        <h5 class="text-lg font-semibold">Directe Werving</h5>
-        <p class="mt-2 text-gray-700">Wij koppelen bedrijven rechtstreeks aan de juiste experts uit ons netwerk —  
-        met Veyron als trusted filter voor kwaliteit, betrouwbaarheid en rendement.</p>
-      </div>
-    </div>
-
-    <div class="text-center mt-12">
-      <button onclick="openTalentModal()" class="btn btn-primary text-lg">
-        Neem contact op met Veyron Talent
-      </button>
-      <p class="text-sm text-gray-500 mt-2">We bespreken graag hoe uw organisatie de juiste versterking kan krijgen.</p>
-    </div>
   </div>
 </section>
 
@@ -1055,6 +1013,14 @@ footer .flex {
     });
     window.addEventListener('keydown', e => {
       if (e.key === 'Escape') closeTalentModal();
+    });
+
+    // Koppel aan knop “Ontdek Veyron Talent”
+    document.querySelectorAll('a[href="#talent"], .btn[href="#talent"]').forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.preventDefault();
+        openTalentModal();
+      });
     });
   </script>
 
