@@ -176,6 +176,23 @@ footer .flex {
   }
 }
 
+    /* --- UITLIJNING FIX GROEIPADENKAARTEN --- */
+    #offer .grid.md\:grid-cols-3 {
+      align-items: stretch;
+    }
+
+    #offer .grid.md\:grid-cols-3 > .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    #offer .grid.md\:grid-cols-3 .btn,
+    #offer .grid.md\:grid-cols-3 a.btn {
+      margin-top: auto;
+    }
+
   </style>
 
   <!-- JSON-LD -->
