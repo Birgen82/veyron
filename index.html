@@ -826,7 +826,7 @@ footer .flex {
 
     // Actieve link detectie — nauwkeurig tot onderaan
     function setActiveLink() {
-      const headerOffset = 120; // hoogte van de sticky header + marge
+      const headerOffset = window.innerWidth < 768 ? 100 : 120;
       const scrollPos = window.scrollY + headerOffset;
       const windowBottom = window.scrollY + window.innerHeight;
       let currentSection = sections[0];
@@ -834,14 +834,20 @@ footer .flex {
       sections.forEach((id, index) => {
         const section = document.getElementById(id);
         if (!section) return;
-        const top = section.offsetTop - headerOffset;
-        const bottom = top + section.offsetHeight;
+        let top = section.offsetTop - headerOffset;
+        let bottom = top + section.offsetHeight;
+
+        // extra marge voor Talent zodat deze correct wordt gedetecteerd
+        if (id === 'talent') {
+          top -= 150;
+          bottom += 150;
+        }
 
         if (scrollPos >= top && scrollPos < bottom) {
           currentSection = id;
         }
 
-        // laatste sectie (contact) — als je onderaan bent
+        // laatste sectie (contact) — onderaan pagina
         if (index === sections.length - 1 && windowBottom >= document.body.scrollHeight - 5) {
           currentSection = id;
         }
