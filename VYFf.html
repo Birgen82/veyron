@@ -1,0 +1,816 @@
+<!doctype html>
+<html lang="nl" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Veyron — Van Visie naar Rendement</title>
+  <meta name="description" content="Veyron bouwt digitale groei in Vlaanderen: strategie, technologie en activatie — helder, schaalbaar en rendabel." />
+  <meta name="keywords" content="digitale groei, strategie, technologie, automatisatie, activatie, MVP, AI, CRM, ERP, Roeselare, Vlaanderen" />
+  <meta name="author" content="Veyron" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="theme-color" content="#FF6B00" />
+
+  <link rel="canonical" href="https://veyron.digital/" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Veyron" />
+  <meta property="og:locale" content="nl_BE" />
+  <meta property="og:title" content="Veyron — Van Visie naar Rendement" />
+  <meta property="og:description" content="Architecten van Digitale Groei: strategie + technologie + activatie = tastbare groei." />
+  <meta property="og:url" content="https://veyron.digital/" />
+  <meta property="og:image" content="/images/og-veyron.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Veyron — Architecten van Digitale Groei" />
+  <meta name="twitter:description" content="Van visie naar rendement: strategie, technologie en activatie die renderen." />
+  <meta name="twitter:image" content="/images/og-veyron.jpg" />
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Manrope','ui-sans-serif','system-ui'] },
+          colors: { brand: { blue: '#007BFF', orange: '#FF6B00', black: '#000000', gray: '#1f2937' } },
+          boxShadow: { soft: '0 8px 20px rgba(0,0,0,0.15)', luxe: '0 15px 40px rgba(0,0,0,0.25)' }
+        }
+      }
+    }
+  </script>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+  <style>
+    html { scroll-behavior: smooth }
+    body {
+      color: #1f2937;
+      background: url('Achtergrond Wbesite Veyron.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Manrope', 'ui-sans-serif', 'system-ui', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    h1,h2,h3,h4,h5 { color:#111827; }
+    p { color:#374151; }
+
+    .section-anchor { scroll-margin-top: 80px; padding: 4rem 1rem; background: rgba(255,255,255,0.85); }
+    .content-block { display:grid; grid-template-columns: 1fr; align-items:center; width:100%; }
+    @media (min-width: 768px) { .content-block { grid-template-columns: 1fr 1fr; } }
+
+    .content-image img { object-fit:cover; width:100%; height:100%; border-radius:0.75rem; filter: grayscale(100%); }
+    .content-text { padding:2rem; background:#fff; border-radius:1rem; border:1px solid rgba(0,0,0,0.08); }
+
+    .card { background:#fff; border-radius:1rem; border:1px solid rgba(0,0,0,0.06); box-shadow: 0 2px 8px rgba(0,0,0,0.03); padding:2rem; }
+
+    footer { background: rgba(0,0,0,0.85); }
+
+    .back-to-top { position: fixed; bottom: 1.5rem; right: 1.5rem; background: #FF6B00; color: #fff; padding: 0.8rem 1rem; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.2); cursor: pointer; font-size: 1.5rem; display: none; }
+
+    .fade-in { opacity:0; transform: translateY(20px); transition: opacity 1s ease, transform 1s ease; }
+    .fade-in.show { opacity:1; transform: translateY(0); }
+
+    .nav-link { position: relative; transition: color 0.3s ease; color: #111827; font-weight: 500; }
+    .nav-link::after { content: ""; position: absolute; bottom: -3px; left: 0; width: 0; height: 2px; background: currentColor; transition: width 0.3s ease; }
+    .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+    .nav-link:hover { color: #007BFF; }
+    .nav-link.active { font-weight: 700; color: #FF6B00; }
+
+    .swiper-slide { transition: transform 0.3s ease; }
+    .swiper-slide:hover { transform: translateY(-2px); }
+    .mySwiper { padding-bottom: 40px; }
+    .swiper-pagination-bullet-active { background: #FF6B00; }
+    .swiper-button-next, .swiper-button-prev { color: #111827; }
+
+    .accent-line {
+      height: 3px;
+      width: 85%;
+      margin: 20px auto;
+      background: linear-gradient(90deg, rgba(255,107,0,0.4), rgba(0,123,255,0.4));
+      border-radius: 2px;
+    }
+
+    .hero-veil { position:absolute; inset:0; background: rgba(255,255,255,0.72); backdrop-filter: blur(2px); border-radius: 0.75rem; }
+
+    .btn { display:inline-flex; align-items:center; justify-content:center; font-weight:700; padding:.9rem 1.4rem; border-radius:9999px; transition: transform .12s ease, opacity .2s ease; border:1px solid transparent; }
+    .btn-primary { background:#FF6B00; color:#fff; border-color:#FF6B00; }
+    .btn-primary:hover { background-color:#e66100; transform: translateY(-1px); }
+    .btn-outline { background:#fff; color:#111827; border-color:#111827; }
+    .btn-outline:hover { transform: translateY(-1px); }
+
+    /* VISUELE TUNING */
+    h1 { letter-spacing:-0.035em; font-weight:800; }
+    h2 { letter-spacing:-0.02em; font-weight:700; color:#0f172a; }
+
+    .text-brand-blue { color:#007BFF !important; }
+    .text-brand-orange { color:#FF6B00 !important; }
+
+    a { color:#007BFF; text-decoration:none; font-weight:500; transition:color .2s ease; }
+    a:hover { color:#FF6B00; text-decoration:underline; }
+
+    footer a { color:#9ca3af; }
+    footer a:hover { color:#FF6B00; }
+
+    h2 span.relative::after {
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-2px;
+      width:100%;
+      height:2px;
+      background-color:rgba(0,123,255,0.65);
+    }
+
+footer img {
+  display: block;
+  height: 48px;
+  width: auto;
+  margin-bottom: 0.75rem;
+  object-fit: contain;
+}
+
+footer .flex {
+  align-items: flex-start;
+}
+
+/* Voorbeelden – automatische hoogteaanpassing */
+.swiper-wrapper {
+  align-items: stretch;
+}
+
+.swiper-slide {
+  display: flex;
+  height: auto;
+}
+
+.swiper-slide > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .swiper-slide > div {
+    min-height: unset;
+  }
+}
+
+  </style>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Veyron",
+    "url": "https://veyron.digital/",
+    "logo": "https://veyron.digital/images/logo.png",
+    "sameAs": ["https://www.linkedin.com/company/veyron-digital"],
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "info@veyron.digital",
+      "telephone": "+32 493 43 61 40",
+      "areaServed": "BE",
+      "availableLanguage": ["nl", "en", "fr"]
+    }]
+  }
+  </script>
+</head>
+
+<body class="font-sans antialiased">
+  <div id="top"></div>
+
+  <!-- Header -->
+<header class="sticky top-0 z-50 bg-white/85 border-b border-gray-200 backdrop-blur-sm">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <a href="#top" class="flex items-center gap-2">
+        <img src="C:\Users\birge\Documents\Veylogo).png" alt="Veyron Logo" class="h-10 w-auto">
+      </a>
+
+      <nav class="hidden md:flex items-center gap-7 text-[15px] font-medium">
+  <a href="#how" class="nav-link">Aanpak</a>
+  <a href="#who" class="nav-link">Over ons</a>
+  <a href="#audiences" class="nav-link">Klanten</a>
+  <a href="#offer" class="nav-link">Aanbod</a>
+  <a href="#talent" class="nav-link">Talent</a>
+  <a href="#examples" class="nav-link">Cases</a>
+  <a href="#why" class="nav-link">Waarom</a>
+  <a href="#contact" class="nav-link">Contact</a>
+
+  <button onclick="openModal()" class="ml-4 px-5 py-2 rounded-full font-semibold text-white bg-brand-orange hover:bg-[#e66100] transition text-[15px]">
+    Boek uw Quickscan
+  </button>
+</nav>
+
+    </div>
+  </div>
+</header>
+
+  <!-- Hero -->
+  <section id="how" class="section-anchor text-center relative">
+    <div class="hero-veil"></div>
+    <div class="max-w-7xl mx-auto px-6 relative">
+      <h1 class="fade-in text-5xl md:text-7xl font-extrabold leading-tight">Van Visie naar Rendement</h1>
+      <h2 class="fade-in mt-2 text-2xl md:text-3xl font-extrabold text-black">
+        Architecten van 
+        <span class="relative inline-block">
+          Digitale Groei
+          <span class="absolute left-0 -bottom-1 w-full h-[3px] bg-brand-blue"></span>
+        </span>.
+      </h2>
+
+      <p class="fade-in mt-6 text-lg md:text-xl max-w-4xl mx-auto text-gray-700">
+        Onze groeiformule verbindt strategie, technologie en activatie tot meetbare digitale groei — 
+        of dat nu gaat om processen slimmer maken of compleet nieuwe digitale platformen bouwen.
+      </p>
+
+      <div class="fade-in mt-12 grid grid-cols-1 md:grid-cols-[1fr_auto_1fr_auto_1fr] gap-6 items-center">
+        <div class="card flex flex-col items-center text-center p-8">
+          <img src="C:\Users\birge\Documents\hero - strategie.png" alt="Strategie" class="h-14 w-14 mb-3 object-contain">
+          <h3 class="text-xl font-bold text-brand-orange mb-2">Strategie</h3>
+          <p class="text-gray-700">Richting & prioriteiten.</p>
+        </div>
+
+        <div class="text-3xl font-extrabold text-gray-400 md:flex hidden">+</div>
+
+        <div class="card flex flex-col items-center text-center p-8">
+          <img src="C:\Users\birge\Documents\hero - technologie.png" alt="Technologie" class="h-14 w-14 mb-3 object-contain">
+          <h3 class="text-xl font-bold text-brand-blue mb-2">Technologie</h3>
+          <p class="text-gray-700">Digitalisatie & automatisatie.</p>
+        </div>
+
+        <div class="text-3xl font-extrabold text-gray-400 md:flex hidden">+</div>
+
+        <div class="card flex flex-col items-center text-center p-8">
+          <img src="C:\Users\birge\Documents\hero - activatie.png" alt="Activatie" class="h-14 w-14 mb-3 object-contain">
+          <h3 class="text-xl font-bold text-brand-orange mb-2">Activatie</h3>
+          <p class="text-gray-700">Adoptie & markt-tractie.</p>
+        </div>
+      </div>
+
+      <div class="fade-in mt-14">
+        <div class="inline-block bg-white border border-black/10 text-gray-900 px-10 py-6 rounded-2xl shadow-sm">
+          <h3 class="text-3xl md:text-4xl font-extrabold">= Digitale Groei</h3>
+          <p class="text-base md:text-lg text-gray-600 mt-2">
+            Sneller, schaalbaarder en altijd meetbaar in rendement.
+          </p>
+        </div>
+        <p class="mt-4 text-base md:text-lg text-gray-500 italic">
+          Versterkt door onze talentpool van experts — flexibel inzetbaar, zonder vaste overhead.
+        </p>
+      </div>
+    </div>
+  </section>
+
+    <div class="accent-line" aria-hidden="true"></div>
+
+    <!-- Wie wij zijn -->
+    <section id="who" class="section-anchor" aria-labelledby="who-title">
+      <div class="max-w-7xl mx-auto px-6 w-full text-center">
+        <h2 id="who-title" class="text-3xl font-extrabold mb-6">Wie wij zijn</h2>
+        <div class="content-text">
+          <p>Digitale verandering is vandaag onvermijdelijk. Toch lopen veel bedrijven vast: te veel losse tools, te veel rapporten, te weinig resultaat.</p>
+          <p class="mt-3">
+            Veyron maakt het eenvoudig. Vanuit Roeselare ondersteunen wij ondernemers en teams in heel Vlaanderen.
+            Wij vertalen uw plannen naar digitale oplossingen die écht werken: van procesdigitalisatie tot het bouwen van volledig nieuwe platformen — academies, communities of schaalbare apps. Altijd helder, schaalbaar en rendabel.
+          </p>
+          <p class="mt-3">
+            Wat ons onderscheidt: wij combineren strategie, technologie en activatie met directe toegang tot een
+            talentpool van experts. Zo krijgt elk project precies de juiste versterking — zonder ballast, altijd resultaatgericht.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="accent-line" aria-hidden="true"></div>
+
+    <!-- Voor wie -->
+    <section id="audiences" class="section-anchor" aria-labelledby="audiences-title">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 id="audiences-title" class="text-3xl font-extrabold mb-6 text-center">Voor wie</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+
+          <!-- KMO’s & familiebedrijven -->
+          <div class="card text-center md:text-left">
+            <div class="flex items-center justify-center md:justify-start gap-3 mb-2">
+              <img src="C:\Users\birge\Documents\voor wie - kmo.png" alt="KMO’s & familiebedrijven" class="h-7 w-7 object-contain" width="28" height="28" loading="lazy" decoding="async">
+              <h3 class="text-xl font-semibold">KMO’s & familiebedrijven</h3>
+            </div>
+            <p class="mt-2">Efficiënter werken door digitalisatie.</p>
+          </div>
+
+          <!-- Startups & scale-ups -->
+          <div class="card text-center md:text-left">
+            <div class="flex items-center justify-center md:justify-start gap-3 mb-2">
+              <img src="C:\Users\birge\Documents\voor wie - scale ups.png" alt="Startups & scale-ups" class="h-7 w-7 object-contain" width="28" height="28" loading="lazy" decoding="async">
+              <h3 class="text-xl font-semibold">Startups & scale-ups</h3>
+            </div>
+            <p class="mt-2">Sneller producten lanceren en opschalen.</p>
+          </div>
+
+          <!-- Directies & teams -->
+          <div class="card text-center md:text-left">
+            <div class="flex items-center justify-center md:justify-start gap-3 mb-2">
+              <img src="C:\Users\birge\Documents\voor wie - directie.png" alt="Directies & teams" class="h-7 w-7 object-contain" width="28" height="28" loading="lazy" decoding="async">
+              <h3 class="text-xl font-semibold">Directies & teams</h3>
+            </div>
+            <p class="mt-2">AI en data inzetten zonder complex gedoe.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="accent-line" aria-hidden="true"></div>
+
+<!-- AANBOD -->
+<section id="offer" class="section-anchor" aria-labelledby="offer-title">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Titel & Intro -->
+    <h2 id="offer-title" class="text-3xl font-extrabold mb-6 text-center">
+      Ons Aanbod — Van inzicht tot groei
+    </h2>
+    <p class="text-center max-w-3xl mx-auto mb-8">
+      Elke samenwerking bij Veyron start met de <span class="text-brand-blue font-semibold">Oriëntatiescan</span>.  
+      Dat is het moment waarop we uw digitale context leren kennen en bepalen wat voor u het meeste oplevert.  
+      Daarna bekijken we samen welk groeipad het beste aansluit:  
+      een <span class="text-brand-orange font-semibold">Groeiscan</span> voor richting,  
+      één of meerdere <span class="text-brand-blue font-semibold">Groeimodules</span> om te bouwen,  
+      of versterking via <span class="text-gray-900 font-semibold">Veyron Talent</span> om het uit te voeren.
+    </p>
+
+    <!-- ORIËNTATIESCAN -->
+    <div class="h-[3px] w-3/5 mx-auto my-10 rounded-full bg-gradient-to-r from-brand-blue/40 to-brand-orange/40"></div>
+    <h3 class="text-2xl font-extrabold text-center mb-3 text-brand-blue">
+      Oriëntatiescan (verplicht startpunt)
+    </h3>
+    <p class="text-center max-w-3xl mx-auto mb-10 text-gray-700">
+      De Oriëntatiescan is een kort online gesprek waarin we uw digitale maturiteit, uitdagingen en ambities verkennen.  
+      We bekijken samen waar de grootste kansen liggen en of een verdere samenwerking zinvol is.  
+      Geen rapporten of beloftes — enkel helderheid over de volgende stap.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-8 items-center mb-14">
+      <div class="card text-center md:text-left">
+        <h4 class="text-xl font-semibold mb-3 text-brand-orange">Wat u mag verwachten</h4>
+        <ul class="list-disc list-inside text-gray-700 space-y-2">
+          <li>Kort online gesprek (ca. 20 minuten)</li>
+          <li>Verkenning van uw digitale aanpak en groeipijnpunten</li>
+          <li>Eerste inschatting van potentieel en prioriteiten</li>
+          <li>Advies welk groeipad het meest rendeert — Groeiscan, Modules of Talent</li>
+        </ul>
+      </div>
+
+      <div class="text-center">
+        <img src="C:\Users\birge\Documents\Quickscan.png" alt="Oriëntatiescan icoon" class="h-28 w-auto mx-auto mb-6 object-contain">
+        <p class="text-gray-600 mb-4 max-w-sm mx-auto">
+          De Oriëntatiescan is gratis en verloopt volledig online.  
+          Ze helpt u inschatten waar uw digitale groei vandaag de meeste winst kan opleveren.
+        </p>
+        <button onclick="openModal()" class="btn btn-primary text-lg">Boek uw Oriëntatiescan</button>
+        <p class="text-sm text-gray-500 mt-2">
+          Wij nemen binnen één werkdag contact op om de sessie in te plannen.
+        </p>
+      </div>
+    </div>
+
+    <!-- DRIE PISTES NA ORIËNTATIE -->
+    <div class="h-[3px] w-3/5 mx-auto my-10 rounded-full bg-gradient-to-r from-brand-orange/40 to-brand-blue/40"></div>
+    <h3 class="text-2xl font-extrabold text-center mb-8 text-gray-900">
+      Na de Oriëntatiescan: drie groeipaden
+    </h3>
+    <p class="text-center max-w-3xl mx-auto mb-12 text-gray-700">
+      Elk bedrijf heeft een ander vertrekpunt.  
+      Vanuit de Oriëntatiescan kiezen we samen het pad dat het meeste oplevert: strategische analyse, technologische bouw of operationele versterking.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-8 mb-16">
+      <!-- Groeiscan -->
+      <div class="card text-center border-t-4 border-brand-orange">
+        <img src="C:\Users\birge\Documents\groeiscan.png" alt="Groeiscan icoon" class="h-12 w-auto mx-auto mb-3 object-contain">
+        <h4 class="text-xl font-semibold mb-3 text-brand-orange">Groeiscan</h4>
+        <p class="text-gray-700 mb-4">
+          Analyse en richting voor uw digitale strategie.  
+          Ontdek waar u rendement verliest en hoe u dit structureel kunt verbeteren.
+        </p>
+        <button onclick="openModal()" class="btn btn-outline">Ontdek de Groeiscan</button>
+      </div>
+
+      <!-- Modules -->
+      <div class="card text-center border-t-4 border-brand-blue">
+        <img src="C:\Users\birge\Documents\module - coreflow.png" alt="Modules icoon" class="h-12 w-auto mx-auto mb-3 object-contain">
+        <h4 class="text-xl font-semibold mb-3 text-brand-blue">Groeimodules</h4>
+        <p class="text-gray-700 mb-4">
+          Van MVP tot automatisatie: onze modules bouwen concreet verder  
+          op wat in de Oriëntatie of Groeiscan bepaald werd.
+        </p>
+        <a href="#modules" class="btn btn-outline">Bekijk de modules</a>
+      </div>
+
+      <!-- Talent -->
+      <div class="card text-center border-t-4 border-black">
+        <img src="C:\Users\birge\Documents\talent - projectteams.png" alt="Talent icoon" class="h-12 w-auto mx-auto mb-3 object-contain">
+        <h4 class="text-xl font-semibold mb-3 text-gray-900">Veyron Talent</h4>
+        <p class="text-gray-700 mb-4">
+          De juiste experts op het juiste moment.  
+          Projectteams, tijdelijke versterking of directe werving — altijd onder het Veyron-kader.
+        </p>
+        <a href="#talent" class="btn btn-outline">Ontdek Veyron Talent</a>
+      </div>
+    </div>
+
+    <!-- GROEIMODULES -->
+    <div id="modules"></div>
+    <h3 class="text-2xl font-extrabold text-center mb-6 text-brand-blue">Groeimodules</h3>
+    <p class="text-center max-w-3xl mx-auto mb-10 text-gray-700">
+      Zodra de richting duidelijk is, bouwen we verder met onze groeimodules.  
+      Elke module levert een concreet resultaat — strategisch, technisch of commercieel.  
+      U kiest wat u nodig heeft, wij bouwen het met precisie en rendement.
+    </p>
+
+    <!-- Strategie -->
+    <h4 class="text-xl font-bold mt-6 mb-3 text-brand-blue">Strategie</h4>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="card"><img src="C:\Users\birge\Documents\module - origin.png" alt="Origin icoon" class="h-7 w-7 object-contain mb-2"><h5 class="text-lg font-semibold">Origin – Van idee naar gevalideerd plan</h5><p class="mt-2">Van ruw idee naar getest concept dat klaar is om te bouwen.</p></div>
+      <div class="card"><img src="C:\Users\birge\Documents\module - continuum.png" alt="Continuum icoon" class="h-7 w-7 object-contain mb-2"><h5 class="text-lg font-semibold">Continuum – Strategisch partnerschap</h5><p class="mt-2">Voortdurende optimalisatie en begeleiding zodat uw bedrijf blijft evolueren.</p></div>
+    </div>
+
+    <!-- Technologie -->
+    <h4 class="text-xl font-bold mt-10 mb-3 text-brand-orange">Technologie</h4>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="card"><img src="C:\Users\birge\Documents\module - forge.png" alt="Forge icoon" class="h-7 w-7 object-contain mb-2"><h5 class="text-lg font-semibold">Forge – Van MVP naar schaalbaar product</h5><p class="mt-2">Digitale platformen en academies die meegroeien met de markt.</p></div>
+      <div class="card"><img src="C:\Users\birge\Documents\module - coreflow.png" alt="Coreflow icoon" class="h-7 w-7 object-contain mb-2"><h5 class="text-lg font-semibold">Coreflow – Digitalisatie & automatisatie</h5><p class="mt-2">Automatiseer processen voor meer efficiëntie.</p></div>
+      <div class="card"><img src="C:\Users\birge\Documents\module - streamline.png" alt="Streamline icoon" class="h-7 w-7 object-contain mb-2"><h5 class="text-lg font-semibold">Streamline – Data-integratie & CRM/ERP-koppelingen</h5><p class="mt-2">Koppel systemen en laat data naadloos stromen.</p></div>
+      <div class="card"><img src="C:\Users\birge\Documents\module - pulse.png" alt="Pulse icoon" class="h-7 w-7 object-contain mb-2"><h5 class="text-lg font-semibold">Pulse – Workflow & backoffice-optimalisatie</h5><p class="mt-2">Maak interne processen overzichtelijker — van onboarding tot documentbeheer.</p></div>
+      <div class="card"><img src="C:\Users\birge\Documents\module - foresight.png" alt="Foresight icoon" class="h-7 w-7 object-contain mb-2"><h5 class="text-lg font-semibold">Foresight – AI & data benutten</h5><p class="mt-2">Inzichten en voorspellende modellen die direct rendement geven.</p></div>
+      <div class="card"><img src="C:\Users\birge\Documents\module - chain.png" alt="Chain icoon" class="h-7 w-7 object-contain mb-2"><h5 class="text-lg font-semibold">Chain – Blockchain & digitale eigendom</h5><p class="mt-2">Transparantie en eigendomsbewijzen via blockchain.</p></div>
+    </div>
+
+    <!-- Activatie -->
+    <h4 class="text-xl font-bold mt-10 mb-3 text-brand-blue">Activatie</h4>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+      <div class="card"><img src="C:\Users\birge\Documents\module - ignite.png" alt="Ignite icoon" class="h-7 w-7 object-contain mb-2"><h5 class="text-lg font-semibold">Ignite – Tractie creëren</h5><p class="mt-2">Campagnes en acties die echte groei opleveren.</p></div>
+      <div class="card"><img src="C:\Users\birge\Documents\module - orbit.png" alt="Orbit icoon" class="h-7 w-7 object-contain mb-2"><h5 class="text-lg font-semibold">Orbit – Community & ecosystem design</h5><p class="mt-2">Bouw digitale ecosystemen — communities, academies, loyalty-platformen.</p></div>
+      <div class="card"><img src="C:\Users\birge\Documents\module - continuum.png" alt="Continuum icoon" class="h-7 w-7 object-contain mb-2"><h5 class="text-lg font-semibold">Continuum – Groei zonder einde</h5><p class="mt-2">Strategisch partnerschap op lange termijn — blijven meten, verbeteren en schalen.</p></div>
+    </div>
+
+    <!-- VEYRON TALENT -->
+    <div id="talent"></div>
+    <div class="h-[3px] w-3/5 mx-auto my-10 rounded-full bg-gradient-to-r from-black/20 via-brand-orange/30 to-brand-blue/20"></div>
+    <h3 class="text-2xl font-extrabold text-center mb-3 text-gray-900">Veyron Talent — Experts die digitale groei bouwen</h3>
+    <p class="text-center max-w-3xl mx-auto mb-10 text-gray-700">
+      Veyron Talent vormt de brug tussen strategie en uitvoering.  
+      We verbinden bedrijven met top-experts binnen één kwaliteitskader: flexibel, resultaatgericht en betrouwbaar.  
+      Of het nu gaat om het samenstellen van een volledig team, tijdelijke versterking of directe aanwerving —  
+      elk traject gebeurt onder de regie van Veyron.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Projectteams -->
+      <div class="card text-center flex flex-col items-center border-t-4 border-brand-blue">
+        <img src="C:\Users\birge\Documents\talent - projectteams.png" alt="Projectteams icoon" class="h-12 w-12 mb-3 object-contain">
+        <h5 class="text-lg font-semibold">Projectteams</h5>
+        <p class="mt-2 text-gray-700">Veyron assembleert multidisciplinaire teams (developers, designers, AI-specialisten, marketeers, projectmanagers) voor interne of klantprojecten.</p>
+      </div>
+
+      <!-- Outsourcing -->
+      <div class="card text-center flex flex-col items-center border-t-4 border-brand-orange">
+        <img src="C:\Users\birge\Documents\talent - outsourcing.png" alt="Outsourcing icoon" class="h-12 w-12 mb-3 object-contain">
+        <h5 class="text-lg font-semibold">Outsourcing</h5>
+        <p class="mt-2 text-gray-700">Tijdelijke versterking binnen het Veyron-kader.  
+        Eén of meerdere experts inzetbaar op locatie of remote — zonder lange contracten of vaste overhead.</p>
+      </div>
+
+      <!-- Directe Werving -->
+      <div class="card text-center flex flex-col items-center border-t-4 border-black">
+        <img src="C:\Users\birge\Documents\talent - directe verbinding.png" alt="Directe verbinding icoon" class="h-12 w-12 mb-3 object-contain">
+        <h5 class="text-lg font-semibold">Directe Werving</h5>
+        <p class="mt-2 text-gray-700">Wij koppelen bedrijven rechtstreeks aan de juiste experts uit ons netwerk —  
+        met Veyron als trusted filter voor kwaliteit, betrouwbaarheid en rendement.</p>
+      </div>
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="mailto:info@veyron.digital?subject=Talent%20samenwerking" class="btn btn-primary text-lg">
+        Neem contact op met Veyron Talent
+      </a>
+      <p class="text-sm text-gray-500 mt-2">We bespreken graag hoe uw organisatie de juiste versterking kan krijgen.</p>
+    </div>
+  </div>
+</section>
+
+    <div class="accent-line" aria-hidden="true"></div>
+
+    <!-- Voorbeelden (Carrousel) -->
+<section id="examples" class="section-anchor" aria-labelledby="examples-title">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 id="examples-title" class="text-3xl font-extrabold mb-6 text-center">Voorbeelden</h2>
+
+    <div class="swiper mySwiper" aria-roledescription="carousel">
+      <div class="swiper-wrapper">
+        
+        <!-- Slide: Broodjeszaak -->
+        <div class="swiper-slide" role="group" aria-label="Broodjeszaak case">
+          <div class="relative overflow-hidden rounded-xl border border-black/10 bg-white flex flex-col justify-between">
+            <div class="flex justify-center items-center h-32">
+              <img src="C:\Users\birge\Documents\belegd broodje.png" alt="Broodjeszaak icoon" class="h-20 w-auto object-contain" width="96" height="80" loading="lazy" decoding="async">
+            </div>
+            <div class="p-6 text-gray-800 flex flex-col justify-between flex-grow">
+              <h3 class="font-semibold mb-3 text-lg">Voorbeeldcase: Broodjeszaak</h3>
+              <p class="text-sm leading-relaxed">
+                <strong>Probleem:</strong> bestellingen enkel via telefoon & papier → fouten en gemiste bedrijfsopdrachten.<br><br>
+                <span class="text-brand-orange font-bold" aria-hidden="true">↓</span><br><br>
+                <strong>Oplossing:</strong> online bestelplatform + activatiecampagne richting bedrijven.<br><br>
+                <span class="text-brand-orange font-bold" aria-hidden="true">↓</span><br><br>
+                <strong>Resultaat:</strong> klanten sneller geholpen en 
+                <span class="font-semibold text-brand-blue">+30% extra omzet</span> binnen 3 maanden.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide: Groothandel -->
+        <div class="swiper-slide" role="group" aria-label="Groothandel case">
+          <div class="relative overflow-hidden rounded-xl border border-black/10 bg-white flex flex-col justify-between">
+            <div class="flex justify-center items-center h-32">
+              <img src="C:\Users\birge\Documents\opleiding.png" alt="Groothandel icoon" class="h-20 w-auto object-contain" width="96" height="80" loading="lazy" decoding="async">
+            </div>
+            <div class="p-6 text-gray-800 flex flex-col justify-between flex-grow">
+              <h3 class="font-semibold mb-3 text-lg">Voorbeeldcase: Groothandel</h3>
+              <p class="text-sm leading-relaxed">
+                <strong>Probleem:</strong> eigen merk + offline opleidingen, maar geen digitaal platform voor training, community en stockbeheer.<br><br>
+                <span class="text-brand-orange font-bold" aria-hidden="true">↓</span><br><br>
+                <strong>Oplossing:</strong> online leerplatform gekoppeld aan community-module, geïntegreerd met stockbeheer en bestelproces.<br><br>
+                <span class="text-brand-orange font-bold" aria-hidden="true">↓</span><br><br>
+                <strong>Resultaat:</strong> medewerkers en klanten krijgen toegang tot opleidingen & community, terwijl stockbeheer efficiënter loopt. 
+                <span class="font-semibold text-brand-blue">→ schaalbare groei en hogere merkbinding.</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide: AI & Data -->
+        <div class="swiper-slide" role="group" aria-label="AI & Data">
+          <div class="relative overflow-hidden rounded-xl border border-black/10 bg-white flex flex-col justify-between">
+            <img class="w-full h-56 object-cover" src="mockup-ai.jpg" alt="AI & Data mockup" width="960" height="224" loading="lazy" decoding="async" />
+            <div class="p-6 text-gray-800 flex flex-col justify-between flex-grow">
+              <h3 class="font-semibold mb-3 text-lg">Voorbeeldcase: AI & Data</h3>
+              <p class="text-sm leading-relaxed">
+                <strong>Probleem:</strong> veel data, maar weinig inzichten.<br><br>
+                <span class="text-brand-orange font-bold" aria-hidden="true">↓</span><br><br>
+                <strong>Oplossing:</strong> implementatie van AI-dashboard en voorspellende modellen voor verkooptrends.<br><br>
+                <span class="text-brand-orange font-bold" aria-hidden="true">↓</span><br><br>
+                <strong>Resultaat:</strong> realtime beslissingen en hogere efficiëntie door data-gedreven sturing.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Navigatie & Paginatie -->
+      <div class="swiper-pagination" aria-hidden="true"></div>
+      <div class="swiper-button-next" aria-label="Volgende slide"></div>
+      <div class="swiper-button-prev" aria-label="Vorige slide"></div>
+    </div>
+  </div>
+</section>
+
+    <!-- Waarom Veyron -->
+    <section id="why" class="section-anchor" aria-labelledby="why-title">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 id="why-title" class="text-3xl font-extrabold mb-12 text-center">Waarom Veyron</h2>
+
+        <div class="grid md:grid-cols-4 gap-8 text-center">
+          <!-- USP 1 -->
+          <div class="flex flex-col items-center">
+            <img src="C:\Users\birge\Documents\usp - helderheid.png" alt="Helderheid" class="h-12 w-12 mb-4 object-contain" width="48" height="48" loading="lazy" decoding="async">
+            <h3 class="font-bold text-lg">Helderheid</h3>
+            <p class="text-base mt-2">Geen vakjargon, maar duidelijke taal.</p>
+          </div>
+
+          <!-- USP 2 -->
+          <div class="flex flex-col items-center">
+            <img src="C:\Users\birge\Documents\usp - precisie.png" alt="Precisie" class="h-12 w-12 mb-4 object-contain" width="48" height="48" loading="lazy" decoding="async">
+            <h3 class="font-bold text-lg">Precisie</h3>
+            <p class="text-base mt-2">Geen overbodige kosten, enkel wat rendeert.</p>
+          </div>
+
+          <!-- USP 3 -->
+          <div class="flex flex-col items-center">
+            <img src="C:\Users\birge\Documents\usp - vertrouwen.png" alt="Vertrouwen" class="h-12 w-12 mb-4 object-contain" width="48" height="48" loading="lazy" decoding="async">
+            <h3 class="font-bold text-lg">Vertrouwen</h3>
+            <p class="text-base mt-2">Professioneel, exclusief en persoonlijk.</p>
+          </div>
+
+          <!-- USP 4 -->
+          <div class="flex flex-col items-center">
+            <img src="C:\Users\birge\Documents\usp - toekomstgericht.png" alt="Toekomstgericht" class="h-12 w-12 mb-4 object-contain" width="48" height="48" loading="lazy" decoding="async">
+            <h3 class="font-bold text-lg">Toekomstgericht</h3>
+            <p class="text-base mt-2">Wat we bouwen, groeit mee met uw bedrijf.</p>
+          </div>
+        </div>
+
+        <p class="text-center max-w-3xl mx-auto mt-10 text-lg text-gray-700 italic">
+          Waar anderen enkel processen digitaliseren, combineren wij dat met het bouwen van nieuwe digitale producten en platformen die bedrijven écht vooruit stuwen.
+        </p>
+      </div>
+    </section>
+
+    <div class="accent-line" aria-hidden="true"></div>
+
+    <!-- Contact -->
+<section id="contact" class="section-anchor" aria-labelledby="contact-title">
+  <div class="max-w-3xl mx-auto px-6">
+    <div class="content-text text-center">
+      <div class="mb-4 flex justify-center">
+        <img src="C:\Users\birge\Documents\contact - handshake.png" alt="Handdruk — Verbinding" class="h-12 w-12 object-contain">
+      </div>
+
+      <h2 id="contact-title" class="text-3xl font-extrabold mb-4">Contact</h2>
+
+      <p class="text-lg mb-6">
+        Klaar om te ontdekken waar uw digitale groei het meeste rendeert?  
+        Start vandaag nog met de gratis Quickscan en krijg inzicht in uw digitale winstpunten.
+      </p>
+
+      <div class="mt-2">
+        <button onclick="openModal()" class="btn btn-primary text-lg">
+          Boek uw gratis Quickscan
+        </button>
+      </div>
+
+      <p class="text-sm text-gray-500 mt-6">
+        Heeft u een andere vraag of wilt u iets afstemmen buiten de Quickscan?  
+        Mail ons gerust op <a href="mailto:info@veyron.digital" class="text-brand-blue underline">info@veyron.digital</a>.
+      </p>
+    </div>
+  </div>
+</section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black/90 text-gray-300" role="contentinfo">
+  <div class="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-4 gap-10">
+    <!-- Logo + tagline -->
+    <div class="flex flex-col items-start">
+      <img src="C:\Users\birge\Documents\Logowit2.png" alt="Veyron Logo" class="h-12 mb-2" width="120" height="48" loading="lazy" decoding="async">
+    </div>
+
+    <!-- Navigatie -->
+    <div>
+      <h4 class="font-semibold text-white mb-3">Navigatie</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#how" class="hover:text-brand-blue">Aanpak</a></li>
+        <li><a href="#who" class="hover:text-brand-blue">Over ons</a></li>
+        <li><a href="#audiences" class="hover:text-brand-blue">Klanten</a></li>
+        <li><a href="#groeiscan" class="hover:text-brand-blue">Groeiscan</a></li>
+        <li><a href="#offer" class="hover:text-brand-blue">Aanbod</a></li>
+        <li><a href="#examples" class="hover:text-brand-blue">Cases</a></li>
+        <li><a href="#why" class="hover:text-brand-blue">Waarom</a></li>
+        <li><a href="#contact" class="hover:text-brand-blue">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div>
+      <h4 class="font-semibold text-white mb-3">Contact</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="mailto:info@veyron.digital" class="hover:text-brand-orange">info@veyron.digital</a></li>
+        <li><a href="tel:+32493436140" class="hover:text-brand-orange">+32 493 43 61 40</a></li>
+      </ul>
+      <div class="mt-4">
+        <button onclick="openModal()" class="btn btn-primary text-xs py-2 px-4">Boek uw Quickscan</button>
+      </div>
+    </div>
+
+    <!-- Volg ons -->
+    <div>
+      <h4 class="font-semibold text-white mb-3">Volg ons</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a class="flex items-center gap-2 hover:text-brand-orange" href="https://www.linkedin.com/company/veyron-digital" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-gray-800 text-center py-4 text-xs text-gray-500">
+    © 2025 Veyron. Alle rechten voorbehouden.
+  </div>
+</footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Terug naar boven" title="Terug naar boven">↑</button>
+
+    <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const backToTop = document.getElementById('backToTop');
+
+    // Toon/verberg back-to-top-knop & active nav links
+    window.addEventListener('scroll', () => {
+      backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
+      setActiveLink();
+    });
+
+    backToTop?.addEventListener('click', () =>
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    );
+
+    // Fade-in animatie bij laden
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.fade-in').forEach(el =>
+        setTimeout(() => el.classList.add('show'), 200)
+      );
+    });
+
+    // Active link detection
+    // Active link detection – groeiscan toegevoegd
+    const sections = ['how', 'who', 'audiences', 'groeiscan', 'offer', 'examples', 'why', 'contact'];
+    const links = document.querySelectorAll('.nav-link');
+
+    function setActiveLink() {
+      let current = sections[0];
+      const scrollPos = window.scrollY + window.innerHeight / 2;
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el && el.offsetTop <= scrollPos) current = id;
+      });
+      links.forEach(l => {
+        l.classList.remove('active');
+        if (l.getAttribute('href') === '#' + current)
+          l.classList.add('active');
+      });
+    }
+
+    // Swiper instellingen
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const swiper = new Swiper('.mySwiper', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      autoplay: reduce ? false : { delay: 4000 },
+      pagination: { el: '.swiper-pagination', clickable: true },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      breakpoints: {
+        768: { slidesPerView: 2, centeredSlides: true },
+        1024: { slidesPerView: 3, centeredSlides: false }
+      },
+      loop: true
+    });
+  </script>
+
+  <!-- Modal Scripts -->
+  <script>
+    function openModal() {
+      const modal = document.getElementById('groeiscanModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.documentElement.classList.add('overflow-y-hidden');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('groeiscanModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.documentElement.classList.remove('overflow-y-hidden');
+    }
+
+    // Sluit de modal bij klik buiten het venster of met Escape
+    window.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    window.addEventListener('click', e => {
+      const modal = document.getElementById('groeiscanModal');
+      if (e.target === modal) closeModal();
+    });
+  </script>
+
+</body>
+</html>
