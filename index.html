@@ -1457,9 +1457,16 @@ footer .flex {
       if (e.target === orientatieModal) closeOrientatieModal();
     });
 
-    // Alle bestaande Oriëntatiescan-knoppen koppelen aan deze modal
-    document.querySelectorAll('button.btn-primary, button[onclick="openModal()"]').forEach(btn => {
+    // Alleen knoppen die specifiek de Oriëntatiescan starten krijgen de Oriëntatie-keuze-pop-up
+    document.querySelectorAll('button.btn-primary.text-lg, button[aria-label="Boek Oriëntatiescan"]').forEach(btn => {
       btn.setAttribute('onclick','openOrientatieModal()');
+    });
+
+    // Zorg dat “Ontdek de Groeiscan” de correcte modal opent
+    document.querySelectorAll('button.btn.btn-outline').forEach(btn => {
+      if (btn.textContent.includes('Ontdek de Groeiscan')) {
+        btn.setAttribute('onclick','openModal()');
+      }
     });
   </script>
 
