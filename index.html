@@ -629,13 +629,13 @@ footer .flex {
     </p>
 
     <!-- ORIËNTATIESCAN -->
-    <div class="h-[3px] w-3/5 mx-auto my-10 rounded-full bg-gradient-to-r from-brand-blue/40 to-brand-orange/40"></div>
+    <!-- === NIEUWE CONTENT ORIËNTATIESCAN (GRATIS STARTPUNT) === -->
     <h3 class="text-2xl font-extrabold text-center mb-3 text-brand-blue">
-      Oriëntatiescan (verplicht startpunt)
+      Oriëntatiescan (gratis startpunt)
     </h3>
     <p class="text-center max-w-3xl mx-auto mb-10 text-gray-700">
-      De Oriëntatiescan is het vaste beginpunt van elk groeitraject bij Veyron.
-      Ze brengt helderheid in je digitale aanpak, processen en tools — en toont waar de grootste winst te halen valt.
+      De Oriëntatiescan is het vaste beginpunt van elk groeitraject bij Veyron.  
+      Ze brengt helderheid in je digitale aanpak, processen en tools — en toont waar de grootste winst te halen valt.  
       Je kunt ze uitvoeren met een consulent via een online gesprek of zelfstandig via het formulier.
     </p>
 
@@ -643,38 +643,48 @@ footer .flex {
       <!-- Kolom links -->
       <div class="card text-center md:text-left">
         <h4 class="text-xl font-semibold mb-3 text-brand-orange">Wat je mag verwachten</h4>
-        <ul class="list-disc list-inside text-gray-700 space-y-2">
+        <ul class="list-disc list-inside text-gray-700 space-y-3 leading-relaxed">
           <li>Analyse van je digitale werking en groeipijnpunten</li>
-          <li>Keuze uit 2 formats:
-            <ul class="list-disc list-inside ml-4 mt-1 space-y-1">
-              <li><span class="text-brand-orange font-semibold">Online gesprek</span> met consulent (± 30 min)</li>
-              <li><span class="text-brand-blue font-semibold">Formulier</span> op eigen tempo (± 15 min)</li>
-            </ul>
-          </li>
+          <li>Keuze uit 2 formats:</li>
+          <ul class="list-disc text-gray-700 ml-8 mt-2 space-y-1">
+            <li><span class="text-brand-orange font-semibold">Online gesprek</span> met consulent (± 30 min)</li>
+            <li><span class="text-brand-blue font-semibold">Formulier</span> op eigen tempo (± 15 min)</li>
+          </ul>
           <li>Helder overzicht van kansen en prioriteiten</li>
           <li>Advies over volgende stap — Groeiscan, Modules of Talent</li>
         </ul>
-        <p class="text-sm text-gray-600 mt-4">
-          📄 <a href="downloads/Veyron-Oriëntatiescan-Voorbereiding.pdf" target="_blank" class="text-brand-blue underline">
-          Download hier de voorbereidingsvragen</a>
-        </p>
       </div>
 
       <!-- Kolom rechts -->
       <div class="text-center">
         <img src="images/oriëntatiescan.png" alt="Oriëntatiescan icoon" class="h-28 w-auto mx-auto mb-6 object-contain">
         <p class="text-gray-600 mb-4 max-w-sm mx-auto">
-          Of je nu kiest voor een online gesprek of de formulier-versie:
+          Of je nu kiest voor een online gesprek of de formulier-versie:  
           de Oriëntatiescan helpt je gericht inzicht krijgen in je digitale rendement en groeikansen.
         </p>
         <button onclick="openOrientatieModal()" class="btn btn-primary text-lg">
           Start je Oriëntatiescan
         </button>
         <p class="text-sm text-gray-500 mt-2">
-          Je ontvangt meteen een bevestiging met praktische info en voorbereidingstips.
+          Je ontvangt meteen een bevestiging met praktische info over de volgende stap.
         </p>
       </div>
     </div>
+    <!-- === EINDE NIEUWE CONTENT === -->
+
+    <!-- === EXTRA CSS (lijst-uitlijning) === -->
+    <style>
+      /* Uitlijning van bullets in Oriëntatiescan-sectie */
+      #offer ul {
+        padding-left: 1rem;
+      }
+      #offer ul ul {
+        padding-left: 1.25rem;
+        margin-top: 0.25rem;
+        margin-bottom: 0.5rem;
+        list-style-type: disc;
+      }
+    </style>
 
     <!-- DRIE PISTES NA ORIËNTATIE -->
     <div class="h-[3px] w-3/5 mx-auto my-10 rounded-full bg-gradient-to-r from-brand-orange/40 to-brand-blue/40"></div>
