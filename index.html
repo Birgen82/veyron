@@ -698,34 +698,29 @@ footer .flex {
       Daarna ontdek je welke richting het meeste oplevert:
     </p>
 
-    <div class="max-w-5xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 text-gray-700">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-6 mb-12 text-gray-700">
+
       <!-- Groeiscan -->
-      <div class="card text-center border-t-4 border-brand-orange">
+      <button onclick="openModal()" class="card text-center border-t-4 border-brand-orange hover:shadow-md transition">
         <img src="images/groeiscan.png" alt="Groeiscan icoon" class="h-10 w-auto mx-auto mb-3 object-contain">
         <h4 class="text-lg font-semibold mb-1 text-brand-orange">Groeiscan</h4>
         <p class="text-sm">Meer diepgang en strategie: ontdek waar digitale groei vastloopt en hoe je vooruit kunt.</p>
-      </div>
+      </button>
 
-      <!-- Modules -->
-      <div class="card text-center border-t-4 border-brand-blue">
+      <!-- Groeimodules -->
+      <button onclick="document.getElementById('modulesModal').classList.remove('hidden'); document.getElementById('modulesModal').classList.add('flex'); document.documentElement.classList.add('overflow-y-hidden');" class="card text-center border-t-4 border-brand-blue hover:shadow-md transition">
         <img src="images/module-coreflow.png" alt="Modules icoon" class="h-10 w-auto mx-auto mb-3 object-contain">
         <h4 class="text-lg font-semibold mb-1 text-brand-blue">Groeimodules</h4>
         <p class="text-sm">Bouw aan concrete oplossingen — van MVP’s tot automatisaties en AI-integraties.</p>
-      </div>
+      </button>
 
       <!-- Talent -->
-      <div class="card text-center border-t-4 border-black">
+      <button onclick="openTalentModal()" class="card text-center border-t-4 border-black hover:shadow-md transition">
         <img src="images/talent-projectteams.png" alt="Talent icoon" class="h-10 w-auto mx-auto mb-3 object-contain">
         <h4 class="text-lg font-semibold mb-1 text-gray-900">Talent</h4>
         <p class="text-sm">De juiste experts op het juiste moment: developers, marketeers, AI-specialisten en meer.</p>
-      </div>
+      </button>
 
-      <!-- Combinatie -->
-      <div class="card text-center border-t-4 border-gray-400">
-        <img src="images/module-continuum.png" alt="Combinatie icoon" class="h-10 w-auto mx-auto mb-3 object-contain">
-        <h4 class="text-lg font-semibold mb-1 text-gray-800">Combinatie</h4>
-        <p class="text-sm">Een traject op maat dat meerdere paden samenbrengt — volledig afgestemd op je doelen.</p>
-      </div>
     </div>
 
     <p class="text-center max-w-3xl mx-auto mb-8 text-gray-700">
