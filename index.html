@@ -701,25 +701,28 @@ footer .flex {
     <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-6 mb-12 text-gray-700">
 
       <!-- Groeiscan -->
-      <button onclick="openModal()" class="card text-center border-t-4 border-brand-orange hover:shadow-md transition">
+      <div class="card text-center border-t-4 border-brand-orange hover:shadow-lg transition transform hover:-translate-y-1">
         <img src="images/groeiscan.png" alt="Groeiscan icoon" class="h-10 w-auto mx-auto mb-3 object-contain">
         <h4 class="text-lg font-semibold mb-1 text-brand-orange">Groeiscan</h4>
-        <p class="text-sm">Meer diepgang en strategie: ontdek waar digitale groei vastloopt en hoe je vooruit kunt.</p>
-      </button>
+        <p class="text-sm mb-4">Meer diepgang en strategie: ontdek waar digitale groei vastloopt en hoe je vooruit kunt.</p>
+        <button onclick="openModal()" class="btn btn-primary text-sm px-5 py-2 mt-auto">Bekijk meer</button>
+      </div>
 
       <!-- Groeimodules -->
-      <button onclick="document.getElementById('modulesModal').classList.remove('hidden'); document.getElementById('modulesModal').classList.add('flex'); document.documentElement.classList.add('overflow-y-hidden');" class="card text-center border-t-4 border-brand-blue hover:shadow-md transition">
+      <div class="card text-center border-t-4 border-brand-blue hover:shadow-lg transition transform hover:-translate-y-1">
         <img src="images/module-coreflow.png" alt="Modules icoon" class="h-10 w-auto mx-auto mb-3 object-contain">
         <h4 class="text-lg font-semibold mb-1 text-brand-blue">Groeimodules</h4>
-        <p class="text-sm">Bouw aan concrete oplossingen — van MVP’s tot automatisaties en AI-integraties.</p>
-      </button>
+        <p class="text-sm mb-4">Bouw aan concrete oplossingen — van MVP’s tot automatisaties en AI-integraties.</p>
+        <button onclick="document.getElementById('modulesModal').classList.remove('hidden'); document.getElementById('modulesModal').classList.add('flex'); document.documentElement.classList.add('overflow-y-hidden');" class="btn btn-primary text-sm px-5 py-2 mt-auto">Bekijk meer</button>
+      </div>
 
       <!-- Talent -->
-      <button onclick="openTalentModal()" class="card text-center border-t-4 border-black hover:shadow-md transition">
+      <div class="card text-center border-t-4 border-black hover:shadow-lg transition transform hover:-translate-y-1">
         <img src="images/talent-projectteams.png" alt="Talent icoon" class="h-10 w-auto mx-auto mb-3 object-contain">
         <h4 class="text-lg font-semibold mb-1 text-gray-900">Talent</h4>
-        <p class="text-sm">De juiste experts op het juiste moment: developers, marketeers, AI-specialisten en meer.</p>
-      </button>
+        <p class="text-sm mb-4">De juiste experts op het juiste moment: developers, marketeers, AI-specialisten en meer.</p>
+        <button onclick="openTalentModal()" class="btn btn-primary text-sm px-5 py-2 mt-auto">Bekijk meer</button>
+      </div>
 
     </div>
 
