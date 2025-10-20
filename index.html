@@ -1617,6 +1617,52 @@ footer .flex {
     });
   </script>
 
+  <!-- === FIX: Cookiebanner kleurcorrectie (Veyron branding) === -->
+  <script>
+    // Wacht tot de banner verschijnt en pas dan onze Veyron-stijl toe
+    const applyVeyronCookieStyle = () => {
+      const banner = document.querySelector('.zps-banner-container');
+      if (!banner) return;
+
+      banner.style.backgroundColor = '#000';
+      banner.style.color = '#fff';
+      banner.style.fontFamily = "'Manrope','ui-sans-serif','system-ui',sans-serif";
+      banner.style.borderTop = '1px solid rgba(255,255,255,0.1)';
+
+      // Link
+      banner.querySelectorAll('a').forEach(a => {
+        a.style.color = '#FF6B00';
+        a.style.fontWeight = '600';
+        a.style.textDecoration = 'underline';
+      });
+
+      // Knoppen
+      const accept = banner.querySelector('button[id*="accept"], .zps-btn-accept');
+      const deny = banner.querySelector('button[id*="deny"], .zps-btn-deny');
+
+      if (accept) {
+        accept.style.backgroundColor = '#FF6B00';
+        accept.style.color = '#fff';
+        accept.style.border = 'none';
+        accept.style.borderRadius = '8px';
+        accept.style.padding = '8px 16px';
+      }
+
+      if (deny) {
+        deny.style.backgroundColor = '#1F2937';
+        deny.style.color = '#fff';
+        deny.style.border = 'none';
+        deny.style.borderRadius = '8px';
+        deny.style.padding = '8px 16px';
+      }
+    };
+
+    // Controleer regelmatig tot de banner is geladen
+    const observer = new MutationObserver(applyVeyronCookieStyle);
+    observer.observe(document.body, { childList: true, subtree: true });
+  </script>
+  <!-- === Einde fix === -->
+
 </body>
 </html>
 
