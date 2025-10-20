@@ -245,29 +245,32 @@ footer .flex {
   align-items: flex-start;
 }
 
-/* === CASES VOLLEDIG UITGELIJND === */
+/* === VOLLEDIGE ALIGNMENT CASES === */
 #examples .swiper-slide > div {
   display: flex;
   flex-direction: column;
   justify-content: stretch;
   height: 100%;
+  min-height: 540px;
 }
 
 #examples .p-6 {
   flex-grow: 1;
   display: grid;
-  grid-template-rows: auto 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr 1fr; /* Titel + 3 secties */
   gap: 1rem;
 }
 
 #examples .p-6 h3 {
   margin-bottom: 0;
+  min-height: 48px; /* zelfde hoogte voor titels */
 }
 
 #examples .case-section {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  min-height: 120px; /* vaste hoogte per blok zorgt voor lijn */
 }
 
 #examples .case-accent {
@@ -276,18 +279,9 @@ footer .flex {
   margin-bottom: 0.25rem;
 }
 
-/* Visuele balans */
-#examples .swiper-slide {
-  align-items: stretch;
-}
-
-#examples .swiper-slide > div {
-  height: 100%;
-  min-height: 520px;
-}
-
 #examples .case-section p {
   flex-grow: 1;
+  color: #111827;
 }
 
     /* --- UITLIJNING FIX GROEIPADENKAARTEN --- */
