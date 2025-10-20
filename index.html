@@ -1516,77 +1516,79 @@ footer .flex {
   </script>
 
   <!-- === POP-UP ORIËNTATIESCAN KEUZE === -->
-  <div id="orientatieModal" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
-    <div class="bg-white max-w-4xl w-full mx-4 p-10 rounded-2xl relative shadow-lg overflow-y-auto max-h-[90vh]">
-      <!-- Sluitknop -->
-      <button id="closeOrientatie" class="absolute top-5 right-6 text-gray-400 hover:text-black text-3xl leading-none">&times;</button>
+<div id="orientatieModal" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
+  <div class="bg-white max-w-4xl w-full mx-4 p-10 rounded-2xl relative shadow-lg overflow-y-auto max-h-[90vh]">
+    <!-- Sluitknop -->
+    <button id="closeOrientatie" class="absolute top-5 right-6 text-gray-400 hover:text-black text-3xl leading-none">&times;</button>
 
-      <!-- Titel -->
-      <h3 class="text-3xl font-extrabold mb-4 text-center text-gray-900">Start met de gratis Oriëntatiescan</h3>
+    <!-- Titel -->
+    <h3 class="text-3xl font-extrabold mb-4 text-center text-gray-900">Start met de gratis Oriëntatiescan</h3>
 
-      <!-- Intro -->
-      <p class="text-center text-gray-700 mb-8 max-w-2xl mx-auto leading-relaxed">
-        In enkele minuten ontdekken we samen waar jullie digitale winst ligt.  
-        De Oriëntatiescan is geen test of verkooppraat: ze geeft ons het nodige inzicht om te bepalen
-        <span class="font-semibold text-brand-orange">welke volgende stap binnen Veyron</span> het meeste digitaal rendement oplevert.
-      </p>
+    <!-- Intro -->
+    <p class="text-center text-gray-700 mb-8 max-w-2xl mx-auto leading-relaxed">
+      In enkele minuten ontdekken we samen waar jullie digitale winst ligt.  
+      De <span class="font-semibold text-brand-orange">Oriëntatiescan</span> is geen test of verkooppraat: ze geeft inzicht om te bepalen  
+      <span class="font-semibold text-brand-blue">welke volgende stap binnen Veyron</span> het meeste digitaal rendement oplevert.
+    </p>
 
-      <!-- Keuze -->
-      <h4 class="text-xl font-bold text-center mb-6 text-gray-900">Kies hoe je wilt starten</h4>
+    <!-- Keuze -->
+    <h4 class="text-xl font-bold text-center mb-6 text-gray-900">Kies hoe je wilt starten</h4>
 
-      <div class="grid md:grid-cols-2 gap-8 mb-8 text-gray-700 items-stretch">
-        <!-- Online gesprek -->
-        <div class="card border-t-4 border-brand-orange text-center hover:shadow-lg transition transform hover:-translate-y-1 flex flex-col justify-between">
-          <div>
-            <img src="images/oriëntatiescan.png" alt="Online gesprek" class="h-12 w-auto mx-auto mb-3 object-contain">
-            <h5 class="text-xl font-semibold mb-3 text-brand-orange">Online Oriëntatiegesprek</h5>
-            <p class="text-gray-700 mb-4">
-              Videogesprek van ±30 minuten met een Veyron-consultant (Teams of Zoho Meeting).
-              We overlopen jullie context, doelen en digitale werking.
-            </p>
-          </div>
-          <div>
-            <button onclick="window.open('https://book.veyron.digital/#/orientatiegesprek','_blank')" class="btn btn-primary w-full mt-auto">
-              Plan je gesprek
-            </button>
-          </div>
+    <div class="grid md:grid-cols-2 gap-8 mb-8 text-gray-700 items-stretch">
+      <!-- Online gesprek -->
+      <div class="card border-t-4 border-brand-orange text-center hover:shadow-lg transition transform hover:-translate-y-1 flex flex-col justify-between">
+        <div>
+          <img src="images/oriëntatiescan.png" alt="Online gesprek met consultant" class="h-12 w-auto mx-auto mb-3 object-contain">
+          <h5 class="text-xl font-semibold mb-3 text-brand-orange">Online Oriëntatiegesprek</h5>
+          <p class="text-gray-700 mb-4">
+            Videogesprek van ±30 minuten met een Veyron-consultant (Teams of Zoho Meeting).  
+            We overlopen jullie context, doelen en digitale werking.
+          </p>
         </div>
-
-        <!-- Zelf invullen -->
-        <div class="card border-t-4 border-brand-blue text-center hover:shadow-lg transition transform hover:-translate-y-1 flex flex-col justify-between">
-          <div>
-            <img src="images/oriëntatiescan-form.png" alt="Zelf invullen" class="h-12 w-auto mx-auto mb-3 object-contain">
-            <h5 class="text-xl font-semibold mb-3 text-brand-blue">Zelf invullen (online formulier)</h5>
-            <p class="text-gray-700 mb-4">
-              Vul dezelfde vragen in op eigen tempo (±10 minuten) en schets je digitale context, tools en prioriteiten.
-            </p>
-          </div>
-          <div>
-            <button onclick="window.open('https://form.veyron.digital/veyron1/form/VeyronOrintatiegesprekVanVisienaarRendement/formperma/C9gfIWuVaTqKn570ESR0P4_cDAAsE_ptNmrp678I14w','_blank')" class="btn btn-outline w-full mt-auto">
-              Start de zelfscan
-            </button>
-          </div>
+        <div>
+          <button onclick="window.open('https://book.veyron.digital/#/orientatiegesprek','_blank')" class="btn btn-primary w-full mt-auto">
+            Plan je gesprek
+          </button>
         </div>
       </div>
 
-      <!-- Wat je krijgt (identiek voor beide opties) -->
-      <div class="text-center bg-gray-50 border border-gray-200 rounded-xl px-6 py-5">
-        <h6 class="font-semibold mb-2 text-gray-900">Wat je krijgt (in beide gevallen)</h6>
-        <p class="text-sm text-gray-700 leading-relaxed max-w-2xl mx-auto">
-          Wij analyseren je antwoorden persoonlijk en sturen binnen enkele werkdagen een kort
-          <span class="font-medium">oriëntatie-overzicht per e-mail</span> met onze aanbeveling:
-          <span class="font-medium">Groeiscan</span> (richting & prioriteiten), <span class="font-medium">Groeimodules</span> (concreet bouwen) of
-          <span class="font-medium">Talent</span> (versterking).
-        </p>
+      <!-- Zelf invullen -->
+      <div class="card border-t-4 border-brand-blue text-center hover:shadow-lg transition transform hover:-translate-y-1 flex flex-col justify-between">
+        <div>
+          <img src="images/oriëntatiescan-form.png" alt="Online formulier Oriëntatiescan" class="h-12 w-auto mx-auto mb-3 object-contain">
+          <h5 class="text-xl font-semibold mb-3 text-brand-blue">Zelf invullen (online formulier)</h5>
+          <p class="text-gray-700 mb-4">
+            Vul dezelfde vragen in op eigen tempo (±10 minuten) en schets je digitale context, tools en prioriteiten.
+          </p>
+        </div>
+        <div>
+          <button onclick="window.open('https://form.veyron.digital/veyron1/form/VeyronOrintatiegesprekVanVisienaarRendement/formperma/C9gfIWuVaTqKn570ESR0P4_cDAAsE_ptNmrp678I14w','_blank')" class="btn btn-outline w-full mt-auto">
+            Start de zelfscan
+          </button>
+        </div>
       </div>
+    </div>
 
-      <!-- Footnote -->
-      <p class="text-center text-sm text-gray-500 mt-4">
-          De Oriëntatiescan is <span class="font-semibold text-brand-orange">gratis en vrijblijvend</span>.  
-        Vragen? <a href="mailto:hello@veyron.digital" class="text-brand-blue underline">hello@veyron.digital</a>.
+    <!-- Resultaatblok -->
+    <div class="text-center bg-gray-50 border border-gray-200 rounded-xl px-6 py-5">
+      <h6 class="font-semibold mb-2 text-gray-900">Wat je krijgt (in beide gevallen)</h6>
+      <p class="text-sm text-gray-700 leading-relaxed max-w-2xl mx-auto">
+        We analyseren je antwoorden persoonlijk en sturen binnen enkele werkdagen een kort  
+        <span class="font-medium">oriëntatie-overzicht per e-mail</span> met onze aanbeveling:  
+        <span class="font-medium">Groeiscan</span> (richting & prioriteiten),  
+        <span class="font-medium">Groeimodules</span> (concreet bouwen) of  
+        <span class="font-medium">Talent</span> (versterking).  
+        Combinaties zijn mogelijk, afhankelijk van wat het meeste oplevert.
       </p>
     </div>
+
+    <!-- Footnote -->
+    <p class="text-center text-sm text-gray-500 mt-4">
+      De Oriëntatiescan is <span class="font-semibold text-brand-orange">gratis en vrijblijvend</span>.  
+      Vragen? <a href="mailto:hello@veyron.digital" class="text-brand-blue underline">hello@veyron.digital</a>.
+    </p>
   </div>
+</div>
 
   <script>
     // --- Openen en sluiten van de Oriëntatie-keuzemodal ---
