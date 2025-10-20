@@ -49,6 +49,75 @@
 
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- === PageSense Cookie Banner – Veyron Branding Override === -->
+  <style>
+    /* Algemene stijl van de banner */
+    div[id*="pagesense-banner"],
+    .zps-banner-container {
+      background-color: #000000 !important;   /* diep zwart */
+      color: #FFFFFF !important;              /* witte tekst */
+      font-family: 'Manrope', 'ui-sans-serif', 'system-ui', sans-serif !important;
+      font-size: 15px !important;
+      line-height: 1.5 !important;
+      border-top: 1px solid rgba(255,255,255,0.1) !important;
+      padding: 12px 20px !important;
+    }
+
+    /* Tekst & linkkleur */
+    .zps-banner-container a,
+    .zps-banner-container a:visited {
+      color: #FF6B00 !important;              /* oranje accent */
+      font-weight: 600 !important;
+      text-decoration: underline !important;
+    }
+
+    /* Knoppen – uniforme look */
+    .zps-banner-container button,
+    .zps-banner-container .zps-btn {
+      border: none !important;
+      border-radius: 8px !important;
+      font-weight: 600 !important;
+      padding: 8px 16px !important;
+      transition: all 0.2s ease !important;
+    }
+
+    /* Knop Accepteren */
+    .zps-banner-container button[id*="accept"],
+    .zps-banner-container .zps-btn-accept {
+      background-color: #FF6B00 !important;
+      color: #FFFFFF !important;
+    }
+    .zps-banner-container button[id*="accept"]:hover {
+      background-color: #E66100 !important;
+      transform: translateY(-1px);
+    }
+
+    /* Knop Weigeren */
+    .zps-banner-container button[id*="deny"],
+    .zps-banner-container .zps-btn-deny {
+      background-color: #1F2937 !important;
+      color: #FFFFFF !important;
+    }
+    .zps-banner-container button[id*="deny"]:hover {
+      opacity: 0.85 !important;
+      transform: translateY(-1px);
+    }
+
+    /* Responsieve optimalisatie */
+    @media (max-width: 640px) {
+      .zps-banner-container {
+        flex-direction: column !important;
+        text-align: center !important;
+      }
+      .zps-banner-container button {
+        width: 100% !important;
+        margin-top: 8px !important;
+      }
+    }
+  </style>
+  <!-- === Einde PageSense Cookie Banner Branding Override === -->
+
   <script>
     tailwind.config = {
       theme: {
