@@ -262,6 +262,38 @@ footer .flex {
   flex: 1;
 }
 
+/* === UNIFORME HOOGTE & UITLIJNING CASES === */
+#examples .swiper-slide > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+#examples .p-6 {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Structuur voor tekstblokken */
+#examples .case-section {
+  margin-bottom: 1rem;
+}
+
+#examples .case-section strong {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+/* Accentkleur consistent */
+#examples .case-accent {
+  color: #FF6B00;
+  font-weight: 700;
+}
+
 @media (max-width: 768px) {
   .swiper-slide > div {
     min-height: unset;
@@ -727,14 +759,21 @@ footer .flex {
             </div>
             <div class="p-6 text-gray-800 flex flex-col justify-between flex-grow">
               <h3 class="font-semibold mb-3 text-lg">Voorbeeldcase: Broodjeszaak</h3>
-              <p class="text-sm leading-relaxed">
-                <strong>Probleem:</strong> bestellingen enkel via telefoon & papier → fouten en gemiste bedrijfsopdrachten.<br><br>
-                <span class="text-brand-orange font-bold">↓</span><br><br>
-                <strong>Oplossing:</strong> online bestelplatform + activatiecampagne richting bedrijven.<br><br>
-                <span class="text-brand-orange font-bold">↓</span><br><br>
-                <strong>Resultaat:</strong> klanten sneller geholpen en 
-                <span class="font-semibold text-brand-blue">+30% extra omzet</span> binnen 3 maanden.
-              </p>
+
+              <div class="case-section">
+                <strong class="case-accent">Probleem:</strong>
+                <p>bestellingen enkel via telefoon & papier → fouten en gemiste bedrijfsopdrachten.</p>
+              </div>
+
+              <div class="case-section">
+                <strong class="case-accent">Oplossing:</strong>
+                <p>online bestelplatform + activatiecampagne richting bedrijven.</p>
+              </div>
+
+              <div class="case-section">
+                <strong class="case-accent">Resultaat:</strong>
+                <p>klanten sneller geholpen en +30% extra omzet binnen 3 maanden.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -747,13 +786,21 @@ footer .flex {
             </div>
             <div class="p-6 text-gray-800 flex flex-col justify-between flex-grow">
               <h3 class="font-semibold mb-3 text-lg">Voorbeeldcase: Groothandel</h3>
-              <p class="text-sm leading-relaxed">
-                <strong>Probleem:</strong> eigen merk + offline opleidingen, maar geen digitaal platform voor training, community en stockbeheer.<br><br>
-                <span class="text-brand-orange font-bold">↓</span><br><br>
-                <strong>Oplossing:</strong> online leerplatform gekoppeld aan community-module en voorraadbeheer.<br><br>
-                <span class="text-brand-orange font-bold">↓</span><br><br>
-                <strong>Resultaat:</strong> schaalbare groei en hogere merkbinding.
-              </p>
+
+              <div class="case-section">
+                <strong class="case-accent">Probleem:</strong>
+                <p>eigen merk en offline opleidingen, maar geen digitaal platform voor training, community en stockbeheer.</p>
+              </div>
+
+              <div class="case-section">
+                <strong class="case-accent">Oplossing:</strong>
+                <p>online leerplatform gekoppeld aan community-module en voorraadbeheer.</p>
+              </div>
+
+              <div class="case-section">
+                <strong class="case-accent">Resultaat:</strong>
+                <p>schaalbare groei en hogere merkbinding.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -766,14 +813,21 @@ footer .flex {
             </div>
             <div class="p-6 text-gray-800 flex flex-col justify-between flex-grow">
               <h3 class="font-semibold mb-3 text-lg">Voorbeeldcase: Outsourcingbedrijf</h3>
-              <p class="text-sm leading-relaxed">
-                <strong>Probleem:</strong> manuele opvolging van klanten en kandidaten → weinig overzicht en gemiste leads.<br><br>
-                <span class="text-brand-orange font-bold">↓</span><br><br>
-                <strong>Oplossing:</strong> automatisaties in leadopvolging en gerichte marketingcampagnes voor profielen en bedrijven.<br><br>
-                <span class="text-brand-orange font-bold">↓</span><br><br>
-                <strong>Resultaat:</strong> 
-                <span class="font-semibold text-brand-blue">+3× meer gekwalificeerde profielen</span> en 45% hogere conversie binnen 2 maanden.
-              </p>
+
+              <div class="case-section">
+                <strong class="case-accent">Probleem:</strong>
+                <p>manuele opvolging van klanten en kandidaten → weinig overzicht en gemiste leads.</p>
+              </div>
+
+              <div class="case-section">
+                <strong class="case-accent">Oplossing:</strong>
+                <p>automatisaties in leadopvolging en gerichte marketingcampagnes voor profielen en bedrijven.</p>
+              </div>
+
+              <div class="case-section">
+                <strong class="case-accent">Resultaat:</strong>
+                <p>+3× meer gekwalificeerde profielen en 45% hogere conversie binnen 2 maanden.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -786,13 +840,21 @@ footer .flex {
             </div>
             <div class="p-6 text-gray-800 flex flex-col justify-between flex-grow">
               <h3 class="font-semibold mb-3 text-lg">Voorbeeldcase: Industriebedrijf</h3>
-              <p class="text-sm leading-relaxed">
-                <strong>Probleem:</strong> bestaande processen zaten vast in SAP → geen flexibiliteit voor nieuwe rapportage of automatisaties.<br><br>
-                <span class="text-brand-orange font-bold">↓</span><br><br>
-                <strong>Oplossing:</strong> maatwerkmodule bovenop het bestaande systeem, gekoppeld aan dashboards en workflow-optimalisatie.<br><br>
-                <span class="text-brand-orange font-bold">↓</span><br><br>
-                <strong>Resultaat:</strong> realtime inzicht in KPI’s en sneller beslissingsproces zonder externe afhankelijkheid.
-              </p>
+
+              <div class="case-section">
+                <strong class="case-accent">Probleem:</strong>
+                <p>bestaande processen zaten vast in SAP → geen flexibiliteit voor nieuwe rapportage of automatisaties.</p>
+              </div>
+
+              <div class="case-section">
+                <strong class="case-accent">Oplossing:</strong>
+                <p>maatwerkmodule bovenop het bestaande systeem, gekoppeld aan dashboards en workflow-optimalisatie.</p>
+              </div>
+
+              <div class="case-section">
+                <strong class="case-accent">Resultaat:</strong>
+                <p>realtime inzicht in KPI’s en sneller beslissingsproces zonder externe afhankelijkheid.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -805,13 +867,21 @@ footer .flex {
             </div>
             <div class="p-6 text-gray-800 flex flex-col justify-between flex-grow">
               <h3 class="font-semibold mb-3 text-lg">Voorbeeldcase: Bedrijfsgroep</h3>
-              <p class="text-sm leading-relaxed">
-                <strong>Probleem:</strong> verschillende overnames → elk bedrijf werkte met eigen systemen en processen, zonder centraal overzicht.<br><br>
-                <span class="text-brand-orange font-bold">↓</span><br><br>
-                <strong>Oplossing:</strong> één digitaal fundament gebouwd voor de hele groep — met gestandaardiseerde processen en centrale dashboards.<br><br>
-                <span class="text-brand-orange font-bold">↓</span><br><br>
-                <strong>Resultaat:</strong> uniforme manier van werken, lagere kosten en realtime inzicht over alle entiteiten heen.
-              </p>
+
+              <div class="case-section">
+                <strong class="case-accent">Probleem:</strong>
+                <p>verschillende overnames → elk bedrijf werkte met eigen systemen en processen, zonder centraal overzicht.</p>
+              </div>
+
+              <div class="case-section">
+                <strong class="case-accent">Oplossing:</strong>
+                <p>één digitaal fundament voor de hele groep met gestandaardiseerde processen en centrale dashboards.</p>
+              </div>
+
+              <div class="case-section">
+                <strong class="case-accent">Resultaat:</strong>
+                <p>uniforme manier van werken, lagere kosten en realtime inzicht over alle entiteiten heen.</p>
+              </div>
             </div>
           </div>
         </div>
