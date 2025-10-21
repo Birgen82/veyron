@@ -162,10 +162,6 @@
     p { color:#374151; }
 
     .section-anchor { scroll-margin-top: 80px; padding: 4rem 1rem; background: rgba(255,255,255,0.85); }
-    #examples.section-anchor {
-      padding-top: 2rem !important;
-      padding-bottom: 2rem !important;
-    }
     .content-block { display:grid; grid-template-columns: 1fr; align-items:center; width:100%; }
     @media (min-width: 768px) { .content-block { grid-template-columns: 1fr 1fr; } }
 
@@ -285,16 +281,24 @@
     .swiper-pagination-bullet-active { background: #FF6B00; }
     .swiper-button-next, .swiper-button-prev { color: #111827; }
 
+    /* --- UNIFORME DIVIDER-LIJN EN ZONE --- */
     .accent-line {
-      height: 2px; /* uniforme dikte */
+      position: relative;
+      height: 2px;                     /* zelfde lijnhoogte */
       width: 85%;
-      margin: 40px auto; /* gelijke verticale afstand overal */
+      margin: 60px auto;               /* uniforme afstand boven/onder */
       background: linear-gradient(
         90deg,
-        rgba(255, 107, 0, 0.4),
-        rgba(0, 123, 255, 0.4)
+        rgba(255, 107, 0, 0.45),
+        rgba(0, 123, 255, 0.45)
       );
       border-radius: 1px;
+    }
+
+    /* optionele subtiele overlay-achtergrond zodat zones visueel gelijk zijn */
+    .divider-zone {
+      background: rgba(255,255,255,0.85); /* zelfde transparantie als sectie */
+      padding: 40px 0;                    /* vaste hoogte van de transparante zone */
     }
 
     .hero-veil { position:absolute; inset:0; background: rgba(255,255,255,0.72); backdrop-filter: blur(2px); border-radius: 0.75rem; }
@@ -341,11 +345,6 @@ footer .flex {
 }
 
 /* === VOLLEDIGE ALIGNMENT CASES === */
-#examples {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-}
-
 #examples .swiper-wrapper {
   display: flex;
   align-items: stretch;
@@ -692,7 +691,9 @@ footer .flex {
     </div>
   </section>
 
-    <div class="accent-line" aria-hidden="true"></div>
+    <div class="divider-zone">
+      <div class="accent-line" aria-hidden="true"></div>
+    </div>
 
     <!-- SEO Keywords: digitale groei Vlaanderen, KMO digitalisatie, AI automatisatie, MVP bouwen, automatisatie teams -->
     <!-- Voor wie -->
@@ -744,7 +745,9 @@ footer .flex {
       </div>
     </section>
 
-    <div class="accent-line" aria-hidden="true"></div>
+    <div class="divider-zone">
+      <div class="accent-line" aria-hidden="true"></div>
+    </div>
 
 <!-- SEO Keywords: digitale groei Vlaanderen, Oriëntatiescan, Groeiscan, groeimodules, digitale transformatie, automatisatie, AI KMO -->
 <section id="offer" class="section-anchor" aria-labelledby="offer-title">
@@ -764,7 +767,9 @@ footer .flex {
     </p>
 
     <!-- ORIËNTATIESCAN -->
-    <div class="accent-line" aria-hidden="true"></div>
+    <div class="divider-zone">
+      <div class="accent-line" aria-hidden="true"></div>
+    </div>
     <h3 class="text-2xl font-extrabold text-center mb-3 text-brand-blue">
       Oriëntatiescan — jouw gratis startpunt
     </h3>
@@ -778,7 +783,9 @@ footer .flex {
     </div>
 
     <!-- JE GROEIPAD -->
-    <div class="accent-line" aria-hidden="true"></div>
+    <div class="divider-zone">
+      <div class="accent-line" aria-hidden="true"></div>
+    </div>
     <h3 class="text-2xl font-extrabold text-center mb-8 text-gray-900">
       Je groeipad na de Oriëntatiescan
     </h3>
@@ -835,7 +842,9 @@ footer .flex {
   </div>
 </section>
 
-    <div class="accent-line" aria-hidden="true"></div>
+    <div class="divider-zone">
+      <div class="accent-line" aria-hidden="true"></div>
+    </div>
 
     <!-- Voorbeelden (Carrousel) -->
 <section id="examples" class="section-anchor" aria-labelledby="examples-title">
@@ -990,7 +999,9 @@ footer .flex {
   </div>
 </section>
 
-    <div class="accent-line" aria-hidden="true"></div>
+    <div class="divider-zone">
+      <div class="accent-line" aria-hidden="true"></div>
+    </div>
 
     <!-- Waarom Veyron -->
     <section id="why" class="section-anchor" aria-labelledby="why-title">
@@ -1038,7 +1049,9 @@ footer .flex {
       </div>
     </section>
 
-    <div class="accent-line" aria-hidden="true"></div>
+    <div class="divider-zone">
+      <div class="accent-line" aria-hidden="true"></div>
+    </div>
 
     <!-- Wie wij zijn -->
     <section id="who" class="section-anchor" aria-labelledby="who-title">
@@ -1071,7 +1084,9 @@ footer .flex {
       </div>
     </section>
 
-    <div class="accent-line" aria-hidden="true"></div>
+    <div class="divider-zone">
+      <div class="accent-line" aria-hidden="true"></div>
+    </div>
 
     <!-- Contact -->
 <section id="contact" class="section-anchor" aria-labelledby="contact-title">
