@@ -19,11 +19,36 @@
   <meta name="geo.position" content="50.947;3.123" />
   <meta name="ICBM" content="50.947,3.123" />
 
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Veyron" />
+  <meta property="og:locale" content="nl_BE" />
+  <meta property="og:title" content="Veyron — Van Visie naar Rendement" />
+  <meta property="og:description" content="Veyron helpt Vlaamse KMO’s en familiebedrijven groeien via strategie, automatisatie en AI — helder, schaalbaar en meetbaar." />
+  <meta property="og:url" content="https://veyron.digital/" />
+  <meta property="og:image" content="/images/og-veyron.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Veyron — Architecten van Digitale Groei" />
+  <meta name="twitter:description" content="Veyron helpt Vlaamse KMO’s en familiebedrijven groeien via strategie, automatisatie en AI — helder, schaalbaar en meetbaar." />
+
+  <meta name="twitter:image" content="/images/og-veyron.jpg" />
+
+
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
   <!-- === ORGANIZATION SCHEMA – DEFINITIEF ZAKELIJK & PRIVACYVEILIG === -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": "https://veyron.digital/#organization",
     "name": "Veyron",
     "legalName": "Veyron",
     "slogan": "Van Visie naar Rendement",
@@ -141,28 +166,44 @@
     }
   </script>
 
-  <!-- Favicons -->
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="manifest" href="/site.webmanifest">
+  <!-- === AI-SEO & SEMANTISCHE STRUCTUUR === -->
 
-  <!-- Open Graph / Twitter -->
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Veyron" />
-  <meta property="og:locale" content="nl_BE" />
-  <meta property="og:title" content="Veyron — Van Visie naar Rendement" />
-  <meta property="og:description" content="Veyron helpt Vlaamse KMO’s en familiebedrijven groeien via strategie, automatisatie en AI — helder, schaalbaar en meetbaar." />
-  <meta property="og:url" content="https://veyron.digital/" />
-  <meta property="og:image" content="/images/og-veyron.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+  <!-- Breadcrumbs -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://veyron.digital/" },
+      { "@type": "ListItem", "position": 2, "name": "Aanpak", "item": "https://veyron.digital/#how" },
+      { "@type": "ListItem", "position": 3, "name": "Aanbod", "item": "https://veyron.digital/#offer" },
+      { "@type": "ListItem", "position": 4, "name": "Cases", "item": "https://veyron.digital/#examples" },
+      { "@type": "ListItem", "position": 5, "name": "Waarom Veyron", "item": "https://veyron.digital/#why" },
+      { "@type": "ListItem", "position": 6, "name": "Over ons", "item": "https://veyron.digital/#who" },
+      { "@type": "ListItem", "position": 7, "name": "Contact", "item": "https://veyron.digital/#contact" }
+    ]
+  }
+  </script>
 
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Veyron — Architecten van Digitale Groei" />
-  <meta name="twitter:description" content="Veyron helpt Vlaamse KMO’s en familiebedrijven groeien via strategie, automatisatie en AI — helder, schaalbaar en meetbaar." />
+  <!-- About-page definitie -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "mainEntity": {
+      "@id": "https://veyron.digital/#organization"
+    }
+  }
+  </script>
 
-  <meta name="twitter:image" content="/images/og-veyron.jpg" />
+  <!-- 🔒 SECURITY & PRIVACY META-HEADERS -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: blob: 'unsafe-inline' 'unsafe-eval'; frame-ancestors 'none';">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=()">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="format-detection" content="telephone=no,email=no,address=no">
+
 
   <!-- Zoho PageSense Tracking Script -->
   <script src="https://cdn-eu.pagesense.io/js/veyron/e38932515ba24deb96c5d45c1f060ec1.js"></script>
@@ -569,100 +610,6 @@ footer .flex {
     });
   </script>
 
-  <!-- JSON-LD -->
-  <!-- === ORGANIZATION SCHEMA – DEFINITIEF ZAKELIJK & PRIVACYVEILIG === -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Veyron",
-    "legalName": "Veyron",
-    "slogan": "Van Visie naar Rendement",
-    "description": "Veyron helpt Vlaamse KMO’s, familiebedrijven en scale-ups groeien via strategie, technologie en activatie — helder, schaalbaar en meetbaar in rendement.",
-    "url": "https://veyron.digital",
-    "logo": "https://veyron.digital/images/Veyronlogonl.png",
-    "brand": {
-      "@type": "Brand",
-      "name": "Veyron",
-      "slogan": "Architecten van Digitale Groei",
-      "logo": "https://veyron.digital/images/Veyronlogonl.png"
-    },
-    "keywords": [
-      "digitale groei",
-      "automatisatie",
-      "AI",
-      "strategie",
-      "technologie",
-      "activatie",
-      "Vlaanderen",
-      "Roeselare",
-      "KMO",
-      "Groeiscan",
-      "Groeimodules",
-      "Veyron Talent"
-    ],
-    "sameAs": [
-      "https://www.linkedin.com/company/veyron-digital"
-    ],
-    "contactPoint": [{
-      "@type": "ContactPoint",
-      "contactType": "customer support",
-      "email": "hello@veyron.digital",
-      "areaServed": "BE",
-      "availableLanguage": ["nl", "en", "fr"]
-    }],
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Hazegoedweg 40",
-      "addressLocality": "Roeselare",
-      "addressRegion": "West-Vlaanderen",
-      "postalCode": "8800",
-      "addressCountry": "BE"
-    },
-    "areaServed": "Vlaanderen"
-  }
-  </script>
-
-  <!-- 🔒 SECURITY & PRIVACY META-HEADERS -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: blob: 'unsafe-inline' 'unsafe-eval'; frame-ancestors 'none';">
-  <meta http-equiv="X-Frame-Options" content="DENY">
-  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=()">
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta name="format-detection" content="telephone=no,email=no,address=no">
-  <!-- === AI-SEO & SEMANTISCHE STRUCTUUR === -->
-
-  <!-- Breadcrumbs -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://veyron.digital/" },
-      { "@type": "ListItem", "position": 2, "name": "Aanpak", "item": "https://veyron.digital/#how" },
-      { "@type": "ListItem", "position": 3, "name": "Aanbod", "item": "https://veyron.digital/#offer" },
-      { "@type": "ListItem", "position": 4, "name": "Cases", "item": "https://veyron.digital/#examples" },
-      { "@type": "ListItem", "position": 5, "name": "Waarom Veyron", "item": "https://veyron.digital/#why" },
-      { "@type": "ListItem", "position": 6, "name": "Over ons", "item": "https://veyron.digital/#who" },
-      { "@type": "ListItem", "position": 7, "name": "Contact", "item": "https://veyron.digital/#contact" }
-    ]
-  }
-  </script>
-
-  <!-- About-page definitie -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "AboutPage",
-    "mainEntity": {
-      "@type": "Organization",
-      "name": "Veyron",
-      "description": "Veyron is de premium architect van digitale groei in Vlaanderen. Wij verbinden strategie, technologie en activatie tot één groeiformule die rendeert.",
-      "url": "https://veyron.digital",
-      "areaServed": "Vlaanderen"
-    }
-  }
-  </script>
 </head>
 
 <body class="font-sans antialiased">
