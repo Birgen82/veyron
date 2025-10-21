@@ -333,12 +333,26 @@ footer .flex {
 }
 
 /* === VOLLEDIGE ALIGNMENT CASES === */
+#examples {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+#examples .swiper-wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+#examples .swiper-slide {
+  display: flex;
+  height: auto !important;
+}
+
 #examples .swiper-slide > div {
   display: flex;
   flex-direction: column;
-  justify-content: stretch;
+  justify-content: space-between;
   height: 100%;
-  min-height: 540px;
 }
 
 #examples .p-6 {
