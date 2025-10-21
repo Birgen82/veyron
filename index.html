@@ -371,18 +371,22 @@ footer .flex {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  min-height: 120px; /* vaste hoogte per blok zorgt voor lijn */
+  margin-bottom: 1.25rem; /* gelijkmatige ruimte tussen blokken */
+}
+
+#examples .case-section:last-child {
+  margin-bottom: 0;
 }
 
 #examples .case-accent {
   color: #FF6B00;
   font-weight: 700;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.35rem;
 }
 
 #examples .case-section p {
-  flex-grow: 1;
   color: #111827;
+  line-height: 1.55;
 }
 
     /* --- UITLIJNING FIX GROEIPADENKAARTEN --- */
