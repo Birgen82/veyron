@@ -177,44 +177,6 @@
     .fade-in { opacity:0; transform: translateY(20px); transition: opacity 1s ease, transform 1s ease; }
     .fade-in.show { opacity:1; transform: translateY(0); }
 
-    /* HEADER VERFIJNING */
-    header {
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    }
-
-    /* NAV LINK STIJL */
-    .nav-link {
-      position: relative;
-      transition: color 0.25s ease;
-      color: #111827;
-    }
-
-    .nav-link::after {
-      content: "";
-      position: absolute;
-      bottom: -3px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background-color: rgba(255, 107, 0, 0.6);
-      transition: width 0.25s ease;
-    }
-
-    .nav-link:hover {
-      color: #FF6B00;
-    }
-
-    .nav-link:hover::after,
-    .nav-link.active::after {
-      width: 100%;
-    }
-
-    .nav-link.active {
-      font-weight: 600;
-      color: #FF6B00;
-      letter-spacing: -0.01em;
-    }
-
   header { box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
 
   .nav-link {
@@ -454,25 +416,6 @@ footer .flex {
     });
   </script>
 
-  <!-- JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Veyron",
-    "url": "https://veyron.digital/",
-    "logo": "https://veyron.digital/images/logo.png",
-    "sameAs": ["https://www.linkedin.com/company/veyron-digital"],
-    "contactPoint": [{
-      "@type": "ContactPoint",
-      "contactType": "customer support",
-      "email": "hello@veyron.digital",
-      "telephone": "+32 493 43 61 40",
-      "areaServed": "BE",
-      "availableLanguage": ["nl", "en", "fr"]
-    }]
-  }
-  </script>
 </head>
 
 <body class="font-sans antialiased">
