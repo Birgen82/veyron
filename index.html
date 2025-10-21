@@ -285,16 +285,50 @@
     .swiper-pagination-bullet-active { background: #FF6B00; }
     .swiper-button-next, .swiper-button-prev { color: #111827; }
 
+    /* --- KLEINE INTERNE LIJNTJES (ongewijzigd) --- */
     .accent-line {
-      height: 2px; /* uniforme dikte */
+      height: 2px;
       width: 85%;
-      margin: 40px auto; /* gelijke verticale afstand overal */
-      background: linear-gradient(
-        90deg,
-        rgba(255, 107, 0, 0.4),
-        rgba(0, 123, 255, 0.4)
-      );
+      margin: 40px auto;
+      background: linear-gradient(90deg, rgba(255,107,0,0.4), rgba(0,123,255,0.4));
       border-radius: 1px;
+    }
+
+    /* --- GROTE SECTIE-SCHEIDERS (UNIFORME GLAASLOOK) --- */
+    .accent-line--major {
+      position: relative;
+      width: 100%;
+      height: 90px; /* hoogte transparante zone */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .accent-line--major::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(0,0,0,0.18) 0%,
+        rgba(255,255,255,0.0) 50%,
+        rgba(0,0,0,0.18) 100%
+      );
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .accent-line--major::after {
+      content: "";
+      position: relative;
+      z-index: 2;
+      width: 85%;
+      height: 2px;
+      border-radius: 1px;
+      background: linear-gradient(90deg, #FF6B00, #007BFF);
+      opacity: 0.65;
     }
 
     .hero-veil { position:absolute; inset:0; background: rgba(255,255,255,0.72); backdrop-filter: blur(2px); border-radius: 0.75rem; }
@@ -692,7 +726,7 @@ footer .flex {
     </div>
   </section>
 
-    <div class="accent-line" aria-hidden="true"></div>
+    <div class="accent-line accent-line--major" aria-hidden="true"></div>
 
     <!-- SEO Keywords: digitale groei Vlaanderen, KMO digitalisatie, AI automatisatie, MVP bouwen, automatisatie teams -->
     <!-- Voor wie -->
@@ -744,7 +778,7 @@ footer .flex {
       </div>
     </section>
 
-    <div class="accent-line" aria-hidden="true"></div>
+    <div class="accent-line accent-line--major" aria-hidden="true"></div>
 
 <!-- SEO Keywords: digitale groei Vlaanderen, Oriëntatiescan, Groeiscan, groeimodules, digitale transformatie, automatisatie, AI KMO -->
 <section id="offer" class="section-anchor" aria-labelledby="offer-title">
@@ -835,7 +869,7 @@ footer .flex {
   </div>
 </section>
 
-    <div class="accent-line" aria-hidden="true"></div>
+    <div class="accent-line accent-line--major" aria-hidden="true"></div>
 
     <!-- Voorbeelden (Carrousel) -->
 <section id="examples" class="section-anchor" aria-labelledby="examples-title">
@@ -990,7 +1024,7 @@ footer .flex {
   </div>
 </section>
 
-    <div class="accent-line" aria-hidden="true"></div>
+    <div class="accent-line accent-line--major" aria-hidden="true"></div>
 
     <!-- Waarom Veyron -->
     <section id="why" class="section-anchor" aria-labelledby="why-title">
@@ -1038,7 +1072,7 @@ footer .flex {
       </div>
     </section>
 
-    <div class="accent-line" aria-hidden="true"></div>
+    <div class="accent-line accent-line--major" aria-hidden="true"></div>
 
     <!-- Wie wij zijn -->
     <section id="who" class="section-anchor" aria-labelledby="who-title">
@@ -1071,7 +1105,7 @@ footer .flex {
       </div>
     </section>
 
-    <div class="accent-line" aria-hidden="true"></div>
+    <div class="accent-line accent-line--major" aria-hidden="true"></div>
 
     <!-- Contact -->
 <section id="contact" class="section-anchor" aria-labelledby="contact-title">
