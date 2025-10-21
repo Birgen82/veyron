@@ -356,9 +356,10 @@ footer .flex {
 }
 
 #examples .p-6 {
-  flex-grow: 1;
-  display: grid;
-  grid-template-rows: auto 1fr 1fr 1fr; /* Titel + 3 secties */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   gap: 1rem;
 }
 
@@ -370,12 +371,14 @@ footer .flex {
 #examples .case-section {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  margin-bottom: 1.25rem; /* gelijkmatige ruimte tussen blokken */
+  justify-content: space-between;
+  flex-grow: 1;
+  min-height: 140px; /* iets meer marge voor balans */
+  padding-bottom: 0.75rem; /* subtiele consistentie */
 }
 
-#examples .case-section:last-child {
-  margin-bottom: 0;
+#examples .p-6 .case-section:not(:last-child) {
+  margin-bottom: 1.5rem; /* gelijke afstand tussen secties */
 }
 
 #examples .case-accent {
