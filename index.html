@@ -243,12 +243,27 @@
     .swiper-pagination-bullet-active { background: #FF6B00; }
     .swiper-button-next, .swiper-button-prev { color: #111827; }
 
-    .accent-line {
-      height: 3px;
+    /* === UNIFORME SECTIE-DIVIDER (zoals tussen Waarom Veyron & Wie wij zijn) === */
+    .divider {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 70px; /* vaste hoogte gelijk aan referentie */
+      background: linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.9) 100%);
+      overflow: hidden;
+    }
+
+    .divider::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       width: 85%;
-      margin: 20px auto;
-      background: linear-gradient(90deg, rgba(255,107,0,0.4), rgba(0,123,255,0.4));
+      height: 2px;
+      background: linear-gradient(90deg, #FF6B00 0%, #007BFF 100%);
       border-radius: 2px;
+      opacity: 0.9;
     }
 
     .hero-veil { position:absolute; inset:0; background: rgba(255,255,255,0.72); backdrop-filter: blur(2px); border-radius: 0.75rem; }
@@ -627,7 +642,7 @@ footer .flex {
     </div>
   </section>
 
-    <div class="accent-line" aria-hidden="true"></div>
+    <div class="divider" aria-hidden="true"></div>
 
     <!-- SEO Keywords: digitale groei Vlaanderen, KMO digitalisatie, AI automatisatie, MVP bouwen, automatisatie teams -->
     <!-- Voor wie -->
@@ -679,7 +694,7 @@ footer .flex {
       </div>
     </section>
 
-    <div class="accent-line" aria-hidden="true"></div>
+    <div class="divider" aria-hidden="true"></div>
 
 <!-- SEO Keywords: digitale groei Vlaanderen, Oriëntatiescan, Groeiscan, groeimodules, digitale transformatie, automatisatie, AI KMO -->
 <section id="offer" class="section-anchor" aria-labelledby="offer-title">
@@ -770,7 +785,7 @@ footer .flex {
   </div>
 </section>
 
-    <div class="accent-line" aria-hidden="true"></div>
+    <div class="divider" aria-hidden="true"></div>
 
     <!-- Voorbeelden (Carrousel) -->
 <section id="examples" class="section-anchor" aria-labelledby="examples-title">
@@ -925,7 +940,7 @@ footer .flex {
   </div>
 </section>
 
-    <div class="accent-line" aria-hidden="true"></div>
+    <div class="divider" aria-hidden="true"></div>
 
     <!-- Waarom Veyron -->
     <section id="why" class="section-anchor" aria-labelledby="why-title">
@@ -973,7 +988,7 @@ footer .flex {
       </div>
     </section>
 
-    <div class="accent-line" aria-hidden="true"></div>
+    <div class="divider" aria-hidden="true"></div>
 
     <!-- Wie wij zijn -->
     <section id="who" class="section-anchor" aria-labelledby="who-title">
@@ -1006,7 +1021,7 @@ footer .flex {
       </div>
     </section>
 
-    <div class="accent-line" aria-hidden="true"></div>
+    <div class="divider" aria-hidden="true"></div>
 
     <!-- Contact -->
 <section id="contact" class="section-anchor" aria-labelledby="contact-title">
