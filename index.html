@@ -212,13 +212,38 @@
     a[href^="mailto:"], a[href^="tel:"] { -webkit-user-select:text !important; -moz-user-select:text !important; -ms-user-select:text !important; user-select:text !important; }
     img { pointer-events:none; -webkit-user-drag:none; user-drag:none; }
   </style>
+
+  <!-- hreflang: Vlaamse versie -->
+  <link rel="alternate" hreflang="nl-be" href="https://veyron.digital/" />
+
+  <!-- Breadcrumbs JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://veyron.digital"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Aanbod",
+        "item": "https://veyron.digital/#offer"
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body class="font-sans antialiased">
-  <div id="top"></div>
 
   <!-- Header -->
   <header class="sticky top-0 z-50 bg-white/95 border-b border-gray-200 backdrop-blur-sm shadow-sm">
+    <div id="top"></div>
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex items-center justify-between h-[70px]">
         <a href="#top" class="flex items-center gap-2 flex-shrink-0">
@@ -266,6 +291,8 @@
       <button onclick="closeMobileMenu()" class="absolute top-6 right-6 text-gray-400 hover:text-white text-3xl leading-none" aria-label="Sluit mobiel menu">&times;</button>
     </div>
   </header>
+
+  <main>
 
   <!-- Hero -->
   <section id="how" class="section-anchor text-center relative">
@@ -610,6 +637,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- Footer -->
   <footer class="bg-black/90 text-gray-300" role="contentinfo">
