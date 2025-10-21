@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# secties binnen de one-pager
+Allow: /#how
+Allow: /#offer
+Allow: /#examples
+Allow: /#why
+Allow: /#who
+Allow: /#contact
+
+# interne of technische paden blokkeren
+Disallow: /admin/
+Disallow: /api/
+Disallow: /tmp/
+
+Sitemap: https://veyron.digital/sitemap.xml
