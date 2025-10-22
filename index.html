@@ -684,44 +684,6 @@ footer .flex {
       }
     }
 
-    /* === CODEX FIX — Vastgepinde sluitknop bij modals === */
-
-    /* Algemene stijl voor alle sluitknoppen in modals */
-    [id^="close"] {
-      position: sticky;          /* Blijft zichtbaar bij scrollen */
-      top: 0.75rem;              /* Altijd net onder de bovenrand */
-      right: 1rem;
-      z-index: 50;               /* Boven andere modal-inhoud */
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      background: rgba(255, 255, 255, 0.85); /* Licht transparante achtergrond */
-      backdrop-filter: blur(6px);
-      border-radius: 9999px;
-      width: 2rem;
-      height: 2rem;
-      line-height: 1;
-      cursor: pointer;
-      color: #374151;
-      font-size: 1.5rem;
-      transition: all 0.2s ease;
-    }
-
-    [id^="close"]:hover {
-      background: #FF6B00;
-      color: #fff;
-      transform: scale(1.1);
-    }
-
-    /* Extra optimalisatie voor mobiel */
-    @media (max-width: 768px) {
-      [id^="close"] {
-        top: 0.5rem;
-        right: 0.5rem;
-        background: rgba(255,255,255,0.95);
-      }
-    }
-
   </style>
 
   <style>
