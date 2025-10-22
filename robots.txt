@@ -1,7 +1,8 @@
 User-agent: *
+# Toelating voor de publieke one-pager
 Allow: /
 
-# secties binnen de one-pager
+# Secties binnen de one-pager (toegelaten anchors)
 Allow: /#how
 Allow: /#offer
 Allow: /#examples
@@ -9,9 +10,16 @@ Allow: /#why
 Allow: /#who
 Allow: /#contact
 
-# interne of technische paden blokkeren
+# Juridische en interne pagina's uitsluiten van indexatie
+Disallow: /privacy
+Disallow: /cookiebeleid
+Disallow: /algemene-voorwaarden
+Disallow: /orientatiegesprek-voorbereiding
+
+# Interne of technische paden blokkeren
 Disallow: /admin/
 Disallow: /api/
 Disallow: /tmp/
 
+# Sitemapverwijzing
 Sitemap: https://veyron.digital/sitemap.xml
