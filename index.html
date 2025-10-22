@@ -437,6 +437,24 @@
     .swiper-pagination-bullet-active { background: #FF6B00; }
     .swiper-button-next, .swiper-button-prev { color: #111827; }
 
+    /* === SWIPER NAVIGATION OPTIMALISATIE === */
+
+    /* Desktop (>=1024px): pijlen zichtbaar */
+    @media (min-width: 1024px) {
+      .swiper-button-next,
+      .swiper-button-prev {
+        display: flex !important;
+      }
+    }
+
+    /* Mobiel (<1024px): pijlen verbergen om overlap te vermijden */
+    @media (max-width: 1023px) {
+      .swiper-button-next,
+      .swiper-button-prev {
+        display: none !important;
+      }
+    }
+
     .accent-line {
       height: 3px;
       width: 85%;
@@ -1631,12 +1649,22 @@ footer .flex {
       loop: true
     });
 
-    // Hover-pauze alleen voor toestellen met muis
+    // === AUTOPLAY-PAUSE LOGICA ===
+    const swiperEl = document.querySelector('.mySwiper');
+
+    // Hover-pauze (desktop met muis)
     if (window.matchMedia('(hover: hover)').matches) {
-      const swiperEl = document.querySelector('.mySwiper');
       swiperEl.addEventListener('mouseenter', () => swiper.autoplay.stop());
       swiperEl.addEventListener('mouseleave', () => swiper.autoplay.start());
     }
+
+    // Touch-hold pauze (mobiel)
+    swiperEl.addEventListener('touchstart', () => {
+      swiper.autoplay.stop();
+    });
+    swiperEl.addEventListener('touchend', () => {
+      swiper.autoplay.start();
+    });
   </script>
 
   <!-- Modal Scripts -->
