@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- Hoofdpagina -->
   <url>
     <loc>https://veyron.digital/</loc>
     <lastmod>2025-10-21</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <url><loc>https://veyron.digital/#how</loc><priority>0.9</priority></url>
-  <url><loc>https://veyron.digital/#offer</loc><priority>0.9</priority></url>
-  <url><loc>https://veyron.digital/#examples</loc><priority>0.8</priority></url>
-  <url><loc>https://veyron.digital/#why</loc><priority>0.8</priority></url>
-  <url><loc>https://veyron.digital/#who</loc><priority>0.8</priority></url>
-  <url><loc>https://veyron.digital/#contact</loc><priority>0.8</priority></url>
+  <!-- Hoofdsecties (one-pager anchors) -->
+  <url><loc>https://veyron.digital/#how</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://veyron.digital/#offer</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://veyron.digital/#examples</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://veyron.digital/#why</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://veyron.digital/#who</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://veyron.digital/#contact</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
-  <url><loc>https://veyron.digital/privacy</loc><priority>0.5</priority></url>
-  <url><loc>https://veyron.digital/algemene-voorwaarden</loc><priority>0.5</priority></url>
-  <url><loc>https://veyron.digital/cookiebeleid</loc><priority>0.5</priority></url>
+  <!-- Juridische pagina’s (noindex maar volgen mag) -->
+  <url><loc>https://veyron.digital/privacy</loc><lastmod>2025-10-21</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://veyron.digital/algemene-voorwaarden</loc><lastmod>2025-10-21</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://veyron.digital/cookiebeleid</loc><lastmod>2025-10-21</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
 
 </urlset>
