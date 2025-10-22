@@ -499,49 +499,6 @@ footer .flex {
   z-index: 1;
 }
 
-#examples .swiper-wrapper {
-  display: flex;
-  align-items: stretch;
-}
-
-#examples .swiper-slide {
-  display: flex;
-  height: auto !important;
-}
-
-#examples .swiper-slide > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-}
-
-#examples .p-6 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  gap: 1rem;
-}
-
-#examples .p-6 h3 {
-  margin-bottom: 0;
-  min-height: 48px; /* zelfde hoogte voor titels */
-}
-
-#examples .case-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex-grow: 1;
-  min-height: 140px; /* iets meer marge voor balans */
-  padding-bottom: 0.75rem; /* subtiele consistentie */
-}
-
-#examples .p-6 .case-section:not(:last-child) {
-  margin-bottom: 1.5rem; /* gelijke afstand tussen secties */
-}
-
 #examples .case-accent {
   color: #FF6B00;
   font-weight: 700;
@@ -551,6 +508,60 @@ footer .flex {
 #examples .case-section p {
   color: #111827;
   line-height: 1.55;
+}
+
+/* === ALIGNMENT FIX — VOORBEELDEN-CARROUSEL === */
+#examples .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  height: 100%;
+}
+
+#examples .swiper-slide > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  height: 100%;
+  padding: 0; /* padding verplaatsen naar p-6 voor uniforme layout */
+}
+
+#examples .p-6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-grow: 1;
+  height: 100%;
+  padding: 2rem; /* uniforme padding */
+}
+
+#examples .p-6 h3 {
+  min-height: 48px;
+  margin-bottom: 0.5rem;
+}
+
+#examples .case-section {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 1.25rem;
+}
+
+#examples .case-section:last-child {
+  margin-bottom: 0;
+}
+
+#examples .swiper-slide img {
+  height: 5rem;  /* gelijke icoonhoogte */
+  width: auto;
+  object-fit: contain;
+}
+
+#examples .swiper-wrapper {
+  align-items: stretch;
 }
 
     /* --- UITLIJNING FIX GROEIPADENKAARTEN --- */
