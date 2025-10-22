@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="nl" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Privacyverklaring | Veyron – Architecten van Digitale Groei</title>
+  <meta name="description" content="Privacyverklaring van Veyron. Lees hoe wij persoonsgegevens verwerken conform GDPR: doeleinden, rechten, bewaartermijnen en cookies." />
+  <meta name="robots" content="noindex,follow" />
+  <link rel="canonical" href="https://veyron.digital/privacy" />
+
+  <!-- Brand Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --black:#000;
+      --white:#fff;
+      --orange:#FF6B00;
+      --blue:#007BFF;
+      --gray:#555;
+      --light:#f9f9f9;
+      --max:960px;
+    }
+
+    html, body {
+      margin:0; padding:0;
+      background:var(--white);
+      color:#111;
+      font-family:'Manrope',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+      line-height:1.6;
+    }
+
+    /* === TOPBAR === */
+    .topbar {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:14px 24px;
+      background:#fff;
+      border-bottom:1px solid #eee;
+      position:sticky;
+      top:0;
+      z-index:50;
+    }
+    .topbar img {
+      height:34px;
+      width:auto;
+    }
+    .topbar a.backlink {
+      color:var(--orange);
+      font-weight:600;
+      text-decoration:none;
+    }
+    .topbar a.backlink:hover { text-decoration:underline; }
+
+    /* === STRUCTUUR === */
+    .wrap { max-width:var(--max); margin:auto; padding:32px 20px; }
+    header h1 {
+      font-size:38px;
+      font-weight:800;
+      margin:10px 0 4px;
+      letter-spacing:-0.02em;
+    }
+    header .badge {
+      text-transform:uppercase;
+      color:var(--orange);
+      font-weight:800;
+      font-size:13px;
+      letter-spacing:0.05em;
+    }
+    .updated { font-size:14px; color:#777; margin-top:4px; }
+
+    /* === CONTENT === */
+    .grid { display:grid; gap:24px; }
+    .grid.cols-2 { grid-template-columns:1fr; }
+    @media(min-width:900px){ .grid.cols-2{ grid-template-columns:1.2fr .8fr; } }
+
+    .card {
+      background:#fff;
+      border:1px solid rgba(0,0,0,0.06);
+      border-radius:16px;
+      box-shadow:0 4px 18px rgba(0,0,0,0.05);
+      padding:26px 24px;
+      margin-bottom:16px;
+    }
+
+    h2 {
+      font-size:22px;
+      margin:1.8rem 0 .6rem;
+      font-weight:800;
+      border-left:4px solid var(--orange);
+      padding-left:10px;
+      color:#000;
+    }
+
+    ul { padding-left:20px; margin:0 0 1rem; }
+    li { margin-bottom:6px; }
+
+    a { color:var(--blue); text-decoration:none; }
+    a:hover { color:var(--orange); text-decoration:underline; }
+
+    /* === SIDEBAR === */
+    .toc { position:sticky; top:20px; }
+    .toc nav a {
+      display:block;
+      padding:6px 0;
+      color:#333;
+      font-size:15px;
+      transition:color .2s ease;
+    }
+    .toc nav a:hover { color:var(--orange); }
+
+    .cta {
+      display:inline-block;
+      background:var(--orange);
+      color:#fff;
+      border-radius:8px;
+      padding:10px 14px;
+      font-weight:700;
+      text-decoration:none;
+    }
+    .cta:hover { opacity:.95; }
+
+    .pill {
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-size:13px;
+      background:var(--light);
+      border:1px solid #eee;
+      border-radius:999px;
+      padding:6px 12px;
+      margin-top:6px;
+    }
+
+    footer {
+      background:var(--light);
+      text-align:center;
+      color:#555;
+      font-size:14px;
+      padding:24px;
+      margin-top:40px;
+      border-top:1px solid #eee;
+    }
+
+    @media(max-width:700px){
+      .wrap { padding:24px 16px; }
+      header h1 { font-size:30px; }
+      h2 { font-size:20px; }
+      .toc { position:relative; top:auto; }
+    }
+  </style>
+
+  <!-- JSON-LD: WebPage & Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Privacyverklaring",
+    "url": "https://veyron.digital/privacy",
+    "inLanguage": "nl-BE",
+    "about": { "@type": "Organization", "name": "Veyron", "url": "https://veyron.digital" },
+    "dateModified": "2025-10-21",
+    "isPartOf": { "@type": "WebSite", "name": "Veyron", "url": "https://veyron.digital" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Veyron",
+    "url": "https://veyron.digital",
+    "email": "privacy@veyron.digital",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Hazegoedweg 40",
+      "postalCode": "8800",
+      "addressLocality": "Roeselare",
+      "addressCountry": "BE"
+    }
+  }
+  </script>
+</head>
+
+<body>
+  <div class="topbar">
+    <a href="/" class="logo"><img src="/images/veyronlogo.png" alt="Veyron Logo"></a>
+    <a href="/" class="backlink">← Terug naar website</a>
+  </div>
+
+  <div class="wrap">
+    <header>
+      <span class="badge">Privacy</span>
+      <h1>Privacyverklaring</h1>
+      <div class="updated">Laatste update: 21 oktober 2025</div>
+    </header>
+
+    <div class="grid cols-2">
+      <main>
+        <section id="wie-we-zijn" class="card">
+          <h2>1. Wie we zijn</h2>
+          <p><strong>Veyron</strong> – eenmanszaak in oprichting<br>
+             Hazegoedweg 40, 8800 Roeselare, België<br>
+             Btw-nummer: <em>in aanvraag</em><br>
+             Contact privacy: <a href="mailto:privacy@veyron.digital">privacy@veyron.digital</a></p>
+          <p>Veyron helpt KMO’s groeien via digitalisatie, automatisatie en activatie. Wij verwerken persoonsgegevens in lijn met de <strong>GDPR</strong> (Verordening EU 2016/679).</p>
+        </section>
+
+        <section id="welke-gegevens" class="card">
+          <h2>2. Welke gegevens we verzamelen</h2>
+          <ul>
+            <li>Identificatie: naam, voornaam, bedrijfsnaam, btw-nummer</li>
+            <li>Contact: e-mailadres, functie/rol</li>
+            <li>Formulierdata: info via website (afspraak, groeiscan, oriëntatie)</li>
+            <li>Technisch/analytics: IP-adres, toestel/browser, bezochte pagina’s (via cookies)</li>
+          </ul>
+          <p>We verzamelen gegevens rechtstreeks via website, formulieren, e-mail of gesprekken.</p>
+        </section>
+
+        <section id="doeleinden" class="card">
+          <h2>3. Waarom we jouw gegevens verwerken</h2>
+          <ul>
+            <li><strong>Contact & opvolging</strong> van aanvragen/afspraken</li>
+            <li><strong>Dienstverlening</strong>: voorbereiding en uitvoering van groeiscans, audits en projecten</li>
+            <li><strong>Facturatie & administratie</strong></li>
+            <li><strong>Marketing/nieuwsbrieven</strong> (enkel na toestemming)</li>
+            <li><strong>Analyse & optimalisatie</strong> van site en diensten (cookies/analytics)</li>
+          </ul>
+          <p>We gebruiken geen persoonsgegevens voor andere doeleinden dan hierboven vermeld.</p>
+        </section>
+
+        <section id="bewaring" class="card">
+          <h2>4. Waar en hoelang we bewaren</h2>
+          <p>Gegevens worden veilig beheerd binnen <strong>Zoho One</strong> (CRM, Forms, Books, PageSense, Campaigns). 
+          Toegang is beperkt en beveiligd (o.a. sterke authenticatie). 
+          We bewaren gegevens niet langer dan nodig of zolang wettelijk vereist (bv. boekhouding).</p>
+        </section>
+
+        <section id="delen" class="card">
+          <h2>5. Delen met derden</h2>
+          <p>We verkopen <strong>nooit</strong> persoonsgegevens. Delen kan enkel met:</p>
+          <ul>
+            <li><strong>Zoho Corporation</strong> (verwerker) binnen GDPR-kaders</li>
+            <li><strong>Projectpartners/onderaannemers</strong> (onder strikte vertrouwelijkheid)</li>
+            <li><strong>Wettelijke instanties</strong> wanneer verplicht</li>
+          </ul>
+          <p>Met verwerkers sluiten we <strong>verwerkersovereenkomsten</strong>.</p>
+        </section>
+
+        <section id="beveiliging" class="card">
+          <h2>6. Beveiliging</h2>
+          <ul>
+            <li>Beveiligde verbindingen (HTTPS/SSL)</li>
+            <li>Tweeledige authenticatie en rolgebaseerde toegang</li>
+            <li>Versleutelde opslag en back-ups waar toepasselijk</li>
+          </ul>
+        </section>
+
+        <section id="rechten" class="card">
+          <h2>7. Jouw GDPR-rechten</h2>
+          <p>Je hebt recht op <strong>inzage</strong>, <strong>rectificatie</strong>, <strong>verwijdering</strong>, 
+          <strong>beperking</strong>, <strong>overdraagbaarheid</strong> en <strong>bezwaar</strong> (o.a. tegen direct marketing).</p>
+          <p>Dien je verzoek in via <a href="mailto:privacy@veyron.digital">privacy@veyron.digital</a>. We beantwoorden binnen 30 dagen.</p>
+        </section>
+
+        <section id="cookies" class="card">
+          <h2>8. Cookies & analytics</h2>
+          <p>Onze website gebruikt functionele en (na toestemming) analytische/marketingcookies 
+          (zoals Zoho PageSense, Google Analytics, LinkedIn/Meta tags) om prestaties te meten en te verbeteren.</p>
+          <p>Meer info: zie ons <a href="/cookiebeleid">Cookiebeleid</a>.</p>
+        </section>
+
+        <section id="klachten" class="card">
+          <h2>9. Klachten & toezicht</h2>
+          <p>Ontevreden over onze gegevensverwerking? Mail <a href="mailto:privacy@veyron.digital">privacy@veyron.digital</a> 
+          of contacteer de <strong>Gegevensbeschermingsautoriteit</strong>, Drukpersstraat 35, 1000 Brussel — 
+          <a href="https://www.gegevensbeschermingsautoriteit.be" target="_blank" rel="noopener">www.gegevensbeschermingsautoriteit.be</a>.</p>
+        </section>
+
+        <section id="wijzigingen" class="card">
+          <h2>10. Wijzigingen</h2>
+          <p>We kunnen deze privacyverklaring actualiseren. De meest recente versie staat steeds op deze pagina.</p>
+        </section>
+      </main>
+
+      <aside class="toc">
+        <div class="card">
+          <h3 style="font-size:16px;margin-top:0;color:#000;">Snel naar</h3>
+          <nav>
+            <a href="#wie-we-zijn">1. Wie we zijn</a>
+            <a href="#welke-gegevens">2. Welke gegevens</a>
+            <a href="#doeleinden">3. Doeleinden</a>
+            <a href="#bewaring">4. Bewaring</a>
+            <a href="#delen">5. Delen</a>
+            <a href="#beveiliging">6. Beveiliging</a>
+            <a href="#rechten">7. Rechten</a>
+            <a href="#cookies">8. Cookies</a>
+            <a href="#klachten">9. Klachten</a>
+            <a href="#wijzigingen">10. Wijzigingen</a>
+          </nav>
+        </div>
+
+        <div class="card">
+          <h3 style="font-size:16px;margin-top:0;color:#000;">Contact privacy</h3>
+          <p style="color:#666;">Heb je vragen of wil je een GDPR-verzoek indienen?</p>
+          <p><a class="cta" href="mailto:privacy@veyron.digital">privacy@veyron.digital</a></p>
+          <p class="pill" title="Veyron adres"><span>📍</span>Hazegoedweg 40, 8800 Roeselare</p>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      © 2025 Veyron — <a href="/algemene-voorwaarden">Algemene voorwaarden</a> · <a href="/cookiebeleid">Cookiebeleid</a>
+    </footer>
+  </div>
+</body>
+</html>
