@@ -489,9 +489,14 @@ footer .flex {
 }
 
 /* === VOLLEDIGE ALIGNMENT CASES === */
+/* === Overlaycorrectie voor sectie “Voorbeelden” === */
 #examples {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin: 0 !important;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background: rgba(255,255,255,0.85); /* zelfde overlay als andere secties */
+  position: relative;
+  z-index: 1;
 }
 
 #examples .swiper-wrapper {
